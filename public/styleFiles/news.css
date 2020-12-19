@@ -1,0 +1,173 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Verdana;
+}
+
+nav.main-nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 17px;
+	background: black;
+}
+
+nav.main-nav a {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	justify-items: center;
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+	font-size: 19px;
+	padding: 4px 3px;
+}
+
+nav.main-nav a:hover {
+	background: white;
+	color: blue;
+	text-shadow: rgb(0, 255, 13) 2px 2px 2px;
+	border-radius: 5px;
+}
+
+header.main-header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 15px;
+	background: rgba(9, 9, 196, 0.712);
+	color: white;
+	font-weight: bold;
+	font-size: 22px;
+}
+
+header.main-header div.pContainer {
+	width: 90vw;
+	height: 45px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+header.main-header div.pContainer p {
+	width: 88vw;
+	height: 30px;
+	overflow: hidden;
+}
+
+header.main-header button {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 4vw;
+	color: white;
+	background: rgba(9, 9, 196, 0.281);
+	border: none;
+}
+
+header.main-header button i {
+	font-size: 28px;
+	cursor: pointer;
+}
+header.main-header button:hover {
+	background: white;
+	color: blue;
+}
+/* side bar of the website */
+
+section.aside-wrapper {
+	display: none;
+	position: absolute;
+	background-color: rgba(221, 221, 221, 0.493);
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	width: 100vw;
+	height: 100vh;
+}
+aside.main-aside {
+	display: flex;
+	flex-direction: column;
+	background: rgb(205, 205, 223);
+	padding: 19px;
+	width: 20vw;
+	float: right;
+}
+div#close-menu {
+	padding: 5px 3px;
+	background-color: red;
+	color: white;
+	font-weight: bold;
+	font-size: 19px;
+	width: 25px;
+	text-align: center;
+	border-radius: 20%;
+	cursor: pointer;
+}
+
+aside.main-aside section {
+	display: flex;
+	flex-direction: column;
+}
+aside.main-aside section p {
+	border-bottom: 1px green solid;
+}
+aside.main-aside a,
+aside.main-aside section a {
+	text-align: left;
+	text-decoration: none;
+	color: rgb(27, 13, 228);
+	margin-top: 11px;
+}
+button#menu:hover > aside.main-aside {
+	display: flex;
+}
+
+/* section subscribe */
+
+section.subscribe {
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	align-items: center;
+	background: radial-gradient(
+		circle at 46%,
+		rgb(18, 18, 158),
+		rgb(14, 121, 156),
+		rgb(141, 118, 40),
+		blue
+	);
+	padding: 19px 22px;
+}
+
+section.subscribe p {
+	margin-left: 15px;
+	font-size: 24px;
+	padding: 11px;
+	background-color: rgba(255, 255, 0, 0.603);
+	border-radius: 9px;
+}
+
+section.subscribe input {
+	margin-left: 15px;
+	font-size: 23px;
+	padding: 11px;
+	border-radius: 9px;
+	border: green 1px solid;
+	outline: none;
+}
+
+section.subscribe button {
+	margin-left: 15px;
+	background-color: rgba(255, 1, 1, 0.726);
+	color: white;
+	font-size: 23px;
+	padding: 11px;
+	border-radius: 9px;
+	border: rgb(0, 19, 128) 1px solid;
+	outline: none;
+	cursor: pointer;
+}

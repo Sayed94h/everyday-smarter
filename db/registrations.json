@@ -1,0 +1,17 @@
+{
+    "nextId": 2,
+    "users": [
+        {
+            "id": 1,
+            "Firstname": "Sayed",
+            "Lastname": "Kazimi",
+            "Email": "0465000000",
+            "Password": "Sdf12345",
+            "birth_month": "1",
+            "birth_day": "5",
+            "birth_year": "1994",
+            "gender": "Male",
+            "loggedin": false
+        }
+    ]
+}

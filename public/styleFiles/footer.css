@@ -1,0 +1,33 @@
+footer.footer {
+	background: rgb(1, 1, 27);
+	padding: 2vw 5vw;
+	width: auto;
+}
+
+footer.footer section.container-footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+footer.footer section.container-footer section {
+	display: flex;
+	flex-direction: column;
+}
+footer.footer section.container-footer section p {
+	border-bottom: 1px green solid;
+	color: white;
+}
+footer.footer section.container-footer section a {
+	text-align: left;
+	text-decoration: none;
+	color: rgb(0, 245, 253);
+	margin-top: 11px;
+	font-size: 12px;
+}
+
+footer p.copyright {
+	text-align: center;
+	margin-top: 28px;
+	color: #fff;
+}

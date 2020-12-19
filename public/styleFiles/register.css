@@ -1,0 +1,177 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Verdana;
+}
+nav.main-nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 17px;
+	background: black;
+}
+
+nav.main-nav a {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	justify-items: center;
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+	font-size: 17px;
+	padding: 4px 3px;
+}
+
+nav.main-nav a:hover {
+	background: white;
+	color: blue;
+	text-shadow: rgb(0, 255, 13) 2px 2px 2px;
+	border-radius: 5px;
+}
+
+section.feedback-user p:last-child {
+	color: red;
+	text-align: center;
+	margin-top: 8px;
+}
+
+section.feedback-user p:first-child {
+	font-weight: bold;
+	border-bottom: 2px gold dotted;
+	background-color: rgb(7, 49, 167);
+	color: white;
+	padding: 9px 1px;
+	text-align: center;
+}
+/*
+	section for the registration --- the main container
+
+*/
+section.registration-container {
+	margin: 5vh 25vw;
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* 
+	section ---  and inputs container
+*/
+section.registration-box {
+	width: 40vw;
+	height: auto;
+	background-color: #fff;
+	box-shadow: rgb(173, 160, 160) 2px 1px 1px 3px;
+	border-radius: 12px;
+}
+
+section.registration-box section.section-header {
+	padding-top: 9px;
+	border-bottom: rgb(136, 124, 124) 1px solid;
+	margin-bottom: 15px;
+}
+section.registration-box section.section-header header {
+	margin: 1vw;
+}
+section.registration-box section.section-header header h1 {
+	font-size: 30px;
+	margin: 0;
+	padding: 0;
+}
+section.registration-box section.section-header header p {
+	font-size: 15px;
+	margin: 5px 0 0 0;
+	padding: 0;
+	color: rgba(0, 0, 0, 0.8);
+}
+
+/*
+	form section for registration
+
+*/
+section.registration-box section.form-container {
+	margin-bottom: 30px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+section.registration-box input.name-input {
+	width: 14vw;
+	padding: 8px;
+	font-size: 19px;
+	border-radius: 6px;
+	outline: none;
+	border: 2px rgba(0, 0, 255, 0.425) solid;
+}
+
+section.registration-box input[id="Email"],
+section.registration-box input[id="Password"] {
+	width: 29.8vw;
+	margin-top: 0.6vw;
+	padding: 8px;
+	font-size: 19px;
+	border-radius: 6px;
+	outline: none;
+	border: 2px rgba(0, 0, 255, 0.425) solid;
+}
+
+section.registration-box div.label-birthdate,
+section.registration-box div.label-gender {
+	margin-top: 9px;
+	color: rgba(0, 0, 0, 0.8);
+	font-size: 17px;
+	padding: 0 0 2px 0;
+	margin-bottom: 2px;
+}
+
+section.registration-box span select {
+	width: 10vw;
+	padding: 6px;
+	font-size: 13px;
+	margin-right: 8px;
+	border-radius: 6px;
+	outline: none;
+}
+
+section.registration-box div.choose-gender select {
+	width: 15vw;
+	padding: 6px;
+	font-size: 13px;
+	margin-right: 8px;
+	border-radius: 6px;
+	outline: none;
+}
+
+section.registration-box div.custom-gender {
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+section.registration-box div.custom-gender label {
+	font-size: 19px;
+	padding: 5px;
+	background-color: blue;
+	color: white;
+	border-radius: 6px;
+}
+section.registration-box div.custom-gender input {
+	width: 13.5vw;
+	font-size: 15px;
+	padding: 5.5px;
+	border-radius: 6px;
+	border: #55e 1px solid;
+	outline: none;
+}
+
+section.registration-box button {
+	width: 18vw;
+	padding: 0.9vw;
+	margin-top: 2vh;
+	margin-bottom: 2vh;
+	margin-left: 9vw;
+	border-radius: 7px;
+	font-size: 20px;
+	text-align: center;
+	background-color: rgb(0, 128, 0);
+	color: white;
+	border: rgba(0, 128, 0, 0.623) 2px solid;
+	cursor: pointer;
+	outline: none;
+}

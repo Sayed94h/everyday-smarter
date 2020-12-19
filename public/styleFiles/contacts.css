@@ -1,0 +1,372 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Verdana;
+}
+.current {
+	background-color: green;
+	border-radius: 5px;
+	padding: 2px;
+}
+nav.main-nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 17px;
+	background: black;
+}
+
+nav.main-nav a {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	justify-items: center;
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+	font-size: 17px;
+	padding: 4px 3px;
+}
+
+nav.main-nav a:hover {
+	background: white;
+	color: blue;
+	text-shadow: rgb(0, 255, 13) 2px 2px 2px;
+	border-radius: 5px;
+}
+
+header.main-header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 15px;
+	background: rgba(9, 9, 196, 0.712);
+	color: white;
+	font-weight: bold;
+	font-size: 22px;
+}
+
+header.main-header div.pContainer {
+	width: 90vw;
+	height: 45px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+header.main-header div.pContainer p {
+	width: 88vw;
+	height: 30px;
+	overflow: hidden;
+}
+
+header.main-header button {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 4vw;
+	color: white;
+	background: rgba(9, 9, 196, 0.281);
+	border: none;
+}
+
+header.main-header button i {
+	font-size: 28px;
+	cursor: pointer;
+}
+header.main-header button:hover {
+	background: white;
+	color: blue;
+}
+/* side bar of the website */
+section.aside-wrapper {
+	display: none;
+	position: absolute;
+	background-color: rgba(221, 221, 221, 0.493);
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	width: 100vw;
+	height: 100vh;
+}
+aside.main-aside {
+	display: flex;
+	flex-direction: column;
+	background: rgb(205, 205, 223);
+	padding: 19px;
+	width: 20vw;
+	float: right;
+}
+div#close-menu {
+	padding: 5px 3px;
+	background-color: red;
+	color: white;
+	font-weight: bold;
+	font-size: 19px;
+	width: 25px;
+	text-align: center;
+	border-radius: 20%;
+	cursor: pointer;
+}
+aside.main-aside section {
+	display: flex;
+	flex-direction: column;
+}
+aside.main-aside section p {
+	border-bottom: 1px green solid;
+}
+aside.main-aside a,
+aside.main-aside section a {
+	text-align: left;
+	text-decoration: none;
+	color: rgb(27, 13, 228);
+	margin-top: 11px;
+}
+
+/* section subscribe */
+
+section.subscribe-wrapper {
+	background: radial-gradient(
+		circle at 46%,
+		rgb(18, 18, 158),
+		rgb(14, 121, 156),
+		rgb(141, 118, 40),
+		blue
+	);
+}
+section.subscribe {
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	align-items: center;
+
+	margin-left: 10vw;
+	padding: 19px 22px;
+}
+
+section.subscribe p {
+	margin-left: 15px;
+	font-size: 24px;
+	padding: 11px;
+	background-color: rgba(255, 255, 0, 0.26);
+	border-radius: 9px;
+	color: white;
+}
+
+section.subscribe input {
+	margin-left: 15px;
+	font-size: 23px;
+	padding: 11px;
+	border-radius: 9px;
+	border: green 1px solid;
+	outline: none;
+	width: 40vw;
+}
+
+section.subscribe button {
+	margin-left: 15px;
+	background-color: rgba(255, 1, 1, 0.726);
+	color: white;
+	font-size: 23px;
+	padding: 11px;
+	border-radius: 9px;
+	border: rgb(0, 19, 128) 1px solid;
+	outline: none;
+	cursor: pointer;
+}
+section.subscribe button:hover {
+	background-color: rgb(0, 255, 255);
+}
+
+/* 
+	main part of the web page
+*/
+
+main article {
+	width: 60%;
+	margin-left: 20%;
+	background-color: rgb(64, 224, 208);
+	border-radius: 9px;
+	padding: 2%;
+	margin-bottom: 30px;
+}
+
+section.form-header p {
+	background-color: #fff;
+	color: #080;
+	padding: 5px 4px;
+	font-weight: bold;
+	margin-left: 20vw;
+	margin-right: 20vw;
+	border-bottom: 1px gold solid;
+}
+p#response {
+	color: red;
+}
+/*
+	contact form
+
+*/
+
+section.form-section div.label {
+	background-color: rgba(11, 13, 49, 0.8);
+	color: #fff;
+	padding: 8px;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 8px;
+	margin-bottom: 6px;
+	width: 92%;
+}
+section.form-section input {
+	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	padding: 8px;
+	border-radius: 8px;
+	font-weight: bold;
+	font-size: 18px;
+	margin-bottom: 14px;
+	width: 92%;
+	outline: none;
+	border: 2px green dotted;
+}
+section.form-section textarea {
+	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	padding: 4px;
+	font-weight: bold;
+	font-size: 18px;
+	margin-bottom: 10px;
+	width: 93%;
+	border-radius: 8px;
+	outline: none;
+	border: 2px rgb(250, 0, 187) dotted;
+}
+section.form-section button {
+	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	padding: 4px;
+	font-weight: bold;
+	font-size: 18px;
+	margin-bottom: 10px;
+	width: 30%;
+	cursor: pointer;
+	margin-left: 65%;
+	border-radius: 8px;
+	outline: none;
+	border: 2px rgb(4, 0, 250) dotted;
+}
+
+@media (max-width: 390px) and (min-width: 230px) {
+	main article {
+		width: 90%;
+		margin-left: 3%;
+		background-color: rgba(5, 53, 53, 0.5);
+		padding: 3%;
+	}
+	/*
+		contact form
+	
+	*/
+
+	section.form-section div.label {
+		background-color: rgba(11, 13, 49, 0.8);
+		color: #fff;
+		padding: 8px;
+		font-weight: bold;
+		font-size: 20px;
+		border-radius: 8px;
+		margin-bottom: 6px;
+		width: 90%;
+	}
+	section.form-section input {
+		background-color: rgb(255, 255, 255);
+		color: rgb(0, 0, 0);
+		padding: 8px;
+		border-radius: 8px;
+		font-weight: bold;
+		font-size: 11px;
+		margin-bottom: 14px;
+		width: 90%;
+	}
+	section.form-section textarea {
+		background-color: rgb(255, 255, 255);
+		color: rgb(0, 0, 0);
+		padding: 4px;
+		font-weight: bold;
+		font-size: 18px;
+		margin-bottom: 10px;
+		width: 91%;
+		border-radius: 8px;
+	}
+	section.form-section button {
+		background-color: rgb(255, 255, 255);
+		color: rgb(0, 0, 0);
+		padding: 4px;
+		font-weight: bold;
+		font-size: 18px;
+		margin-bottom: 10px;
+		width: 30%;
+		cursor: pointer;
+		margin-left: 65%;
+		border-radius: 8px;
+	}
+}
+
+@media (max-width: 530px) and (min-width: 390px) {
+	main article {
+		width: 90%;
+		margin-left: 3%;
+		background-color: rgba(15, 116, 116, 0.5);
+		padding: 2%;
+	}
+	/*
+		contact form
+	
+	*/
+
+	section.form-section div.label {
+		background-color: rgba(11, 13, 49, 0.8);
+		color: #fff;
+		padding: 8px;
+		font-weight: bold;
+		font-size: 20px;
+		border-radius: 8px;
+		margin-bottom: 6px;
+		width: 90%;
+	}
+	section.form-section input {
+		background-color: rgb(255, 255, 255);
+		color: rgb(0, 0, 0);
+		padding: 8px;
+		border-radius: 8px;
+		font-weight: bold;
+		font-size: 14px;
+		margin-bottom: 14px;
+		width: 90%;
+	}
+	section.form-section textarea {
+		background-color: rgb(255, 255, 255);
+		color: rgb(0, 0, 0);
+		padding: 4px;
+		font-weight: bold;
+		font-size: 18px;
+		margin-bottom: 10px;
+		width: 91%;
+		border-radius: 8px;
+	}
+	section.form-section button {
+		background-color: rgb(255, 255, 255);
+		color: rgb(0, 0, 0);
+		padding: 4px;
+		font-weight: bold;
+		font-size: 18px;
+		margin-bottom: 10px;
+		width: 30%;
+		cursor: pointer;
+		margin-left: 65%;
+		border-radius: 8px;
+	}
+}
