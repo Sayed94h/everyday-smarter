@@ -13,8 +13,9 @@
 1. Home page ❎
 1. Animations and transitions ❎
 1. Look at users interaction 💹❎
-1. Login page ❌💹
-1. Registration page ❌💹
-1. Subscribe page ❌💹
+1. Login page 💹
+1. Registration page ✅
+1. Subscribe page ✅
 1. Notifications ❌
-1. Very responsive and accessible ❌
+1. Very responsive and accessible ❌💹
+1. Email API ❌
