@@ -1,0 +1,721 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Verdana;
+}
+.current {
+	background-color: green;
+	border-radius: 5px;
+	padding: 2px;
+}
+nav.main-nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 17px;
+	background: black;
+}
+
+nav.main-nav a {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	justify-items: center;
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+	font-size: 17px;
+	padding: 4px 3px;
+}
+
+nav.main-nav a:hover {
+	background: white;
+	color: blue;
+	text-shadow: rgb(0, 255, 13) 2px 2px 2px;
+	border-radius: 5px;
+}
+
+header.main-header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 15px;
+	background: rgba(9, 9, 196, 0.712);
+	color: white;
+	font-weight: bold;
+	font-size: 22px;
+}
+
+header.main-header div.pContainer {
+	width: 80vw;
+	height: 45px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+header.main-header div.pContainer p {
+	width: 80vw;
+	height: 30px;
+	overflow: hidden;
+}
+div#login-profile-name {
+	font-size: 15px;
+}
+div.login-logo {
+	margin-left: 16px;
+	margin-right: 16px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+header.main-header button {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 4vw;
+	color: white;
+	background: rgba(9, 9, 196, 0.281);
+	border: none;
+}
+
+header.main-header button i {
+	font-size: 28px;
+	cursor: pointer;
+}
+header.main-header button:hover {
+	background: white;
+	color: blue;
+}
+/* side bar of the website */
+
+section.aside-wrapper {
+	display: none;
+	position: absolute;
+	background-color: rgba(221, 221, 221, 0.493);
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	width: 100vw;
+	height: 100vh;
+}
+aside.main-aside {
+	display: flex;
+	flex-direction: column;
+	background: rgb(205, 205, 223);
+	padding: 19px;
+	width: 20vw;
+	float: right;
+}
+div#close-menu {
+	padding: 3px 5px;
+	background-color: red;
+	color: white;
+	font-weight: bold;
+	font-size: 19px;
+	width: 25px;
+	text-align: center;
+	border-radius: 20%;
+	cursor: pointer;
+}
+
+aside.main-aside section {
+	display: flex;
+	flex-direction: column;
+}
+aside.main-aside section p {
+	border-bottom: 1px green solid;
+}
+aside.main-aside a,
+aside.main-aside section a {
+	text-align: left;
+	text-decoration: none;
+	color: rgb(27, 13, 228);
+	margin-top: 11px;
+}
+button#menu:hover > aside.main-aside {
+	display: flex;
+}
+
+/* section subscribe */
+
+section.subscribe-wrapper {
+	background: radial-gradient(
+		circle at 46%,
+		rgb(18, 18, 158),
+		rgb(14, 121, 156),
+		rgb(141, 118, 40),
+		blue
+	);
+}
+section.subscribe {
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	align-items: center;
+
+	margin-left: 10vw;
+	padding: 19px 22px;
+}
+
+section.subscribe p {
+	margin-left: 15px;
+	font-size: 24px;
+	padding: 11px;
+	background-color: rgba(255, 255, 0, 0.26);
+	border-radius: 9px;
+	color: white;
+}
+
+section.subscribe input {
+	margin-left: 15px;
+	font-size: 23px;
+	padding: 11px;
+	border-radius: 9px;
+	border: green 1px solid;
+	outline: none;
+	width: 40vw;
+}
+
+section.subscribe button {
+	margin-left: 15px;
+	background-color: rgba(255, 1, 1, 0.726);
+	color: white;
+	font-size: 23px;
+	padding: 11px;
+	border-radius: 9px;
+	border: rgb(0, 19, 128) 1px solid;
+	outline: none;
+	cursor: pointer;
+}
+section.subscribe button:hover {
+	background-color: rgb(0, 255, 255);
+}
+
+@media (max-width: 390px) {
+	.current {
+		background-color: green;
+		border-radius: 5px;
+		padding: 2px;
+	}
+	nav.main-nav {
+		display: none;
+	}
+
+	/* 
+		Header of the page
+*/
+	header.main-header {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 0.8vw;
+		background: rgba(9, 9, 196, 0.712);
+		color: white;
+		width: auto;
+	}
+
+	header.main-header div.pContainer {
+		width: 69vw;
+		height: 23px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+	header.main-header div.pContainer p {
+		width: 69vw;
+		height: 21px;
+		overflow: hidden;
+		font-size: 15px;
+	}
+	div#login-profile-name {
+		font-size: 11px;
+	}
+	div.login-logo {
+		margin-left: 5px;
+		margin-right: 5px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	header.main-header button {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		width: 5vw;
+		color: white;
+		background: rgba(9, 9, 196, 0.281);
+		border: none;
+	}
+
+	header.main-header button i {
+		padding: 1px 2px;
+		font-size: 26px;
+		cursor: pointer;
+	}
+	header.main-header button:hover {
+		background: white;
+		color: blue;
+	}
+	/* side bar of the website */
+
+	section.aside-wrapper {
+		display: none;
+		position: absolute;
+		background-color: rgba(221, 221, 221, 0.493);
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 2;
+		width: 100vw;
+		height: 100vh;
+	}
+	aside.main-aside {
+		display: flex;
+		flex-direction: column;
+		background: rgb(205, 205, 223);
+		padding: 19px;
+		width: 37vw;
+		float: right;
+	}
+
+	/* section subscribe */
+
+	section.subscribe {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		margin-left: 2px;
+		padding: 19px 5px;
+		width: 90vw;
+	}
+
+	section.subscribe p {
+		font-size: 12px;
+		padding: 5px;
+		background-color: rgba(255, 255, 0, 0.26);
+		border-radius: 9px;
+		color: white;
+	}
+
+	section.subscribe input {
+		margin-left: 13px;
+		font-size: 13px;
+		padding: 8px;
+		border-radius: 9px;
+		border: green 1px solid;
+		outline: none;
+		width: 30vw;
+	}
+
+	section.subscribe button {
+		margin-left: 13px;
+		background-color: rgba(255, 1, 1, 0.726);
+		color: white;
+		font-size: 12px;
+		padding: 5px;
+		border-radius: 9px;
+		border: rgb(0, 19, 128) 1px solid;
+		outline: none;
+		cursor: pointer;
+	}
+}
+/* 
+        MAX WIDTH 490PX
+*/
+@media (max-width: 490px) and (min-width: 390px) {
+	nav.main-nav {
+		display: none;
+	}
+
+	/* 
+		Header of the page
+*/
+	header.main-header {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 1vw;
+		background: rgba(9, 9, 196, 0.712);
+		color: white;
+		width: auto;
+	}
+
+	header.main-header div.pContainer {
+		width: 75vw;
+		height: 23px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+	header.main-header div.pContainer p {
+		width: 75vw;
+		height: 21px;
+		overflow: hidden;
+		font-size: 15px;
+	}
+	div#login-profile-name {
+		font-size: 11px;
+	}
+	div.login-logo {
+		margin-left: 5px;
+		margin-right: 5px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	header.main-header button {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		width: 5vw;
+		color: white;
+		background: rgba(9, 9, 196, 0.281);
+		border: none;
+	}
+
+	header.main-header button i {
+		padding: 1px 2px;
+		font-size: 26px;
+		cursor: pointer;
+	}
+	header.main-header button:hover {
+		background: white;
+		color: blue;
+	}
+	/* side bar of the website */
+
+	section.aside-wrapper {
+		display: none;
+		position: absolute;
+		background-color: rgba(221, 221, 221, 0.493);
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 2;
+		width: 100vw;
+		height: 100vh;
+	}
+	aside.main-aside {
+		display: flex;
+		flex-direction: column;
+		background: rgb(205, 205, 223);
+		padding: 19px;
+		width: 39vw;
+		float: right;
+	}
+
+	/* section subscribe */
+
+	section.subscribe {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		margin-left: 2px;
+		padding: 19px 5px;
+		width: 90vw;
+	}
+
+	section.subscribe p {
+		font-size: 12px;
+		padding: 5px;
+		background-color: rgba(255, 255, 0, 0.26);
+		border-radius: 9px;
+		color: white;
+	}
+
+	section.subscribe input {
+		margin-left: 13px;
+		font-size: 13px;
+		padding: 8px;
+		border-radius: 9px;
+		border: green 1px solid;
+		outline: none;
+		width: 30vw;
+	}
+
+	section.subscribe button {
+		margin-left: 13px;
+		background-color: rgba(255, 1, 1, 0.726);
+		color: white;
+		font-size: 12px;
+		padding: 5px;
+		border-radius: 9px;
+		border: rgb(0, 19, 128) 1px solid;
+		outline: none;
+		cursor: pointer;
+	}
+}
+
+/* 
+        MAX WIDTH 670PX
+*/
+@media (max-width: 670px) and (min-width: 490px) {
+	nav.main-nav {
+		display: none;
+	}
+
+	/* 
+		Header of the page
+*/
+	header.main-header {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 1vw;
+		background: rgba(9, 9, 196, 0.712);
+		color: white;
+		width: auto;
+	}
+
+	header.main-header div.pContainer {
+		width: 77vw;
+		height: 23px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+	header.main-header div.pContainer p {
+		width: 77vw;
+		height: 21px;
+		overflow: hidden;
+		font-size: 15px;
+	}
+	div#login-profile-name {
+		font-size: 11px;
+	}
+	div.login-logo {
+		margin-left: 5px;
+		margin-right: 5px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	header.main-header button {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		width: 5vw;
+		color: white;
+		background: rgba(9, 9, 196, 0.281);
+		border: none;
+	}
+
+	header.main-header button i {
+		padding: 1px 2px;
+		font-size: 28px;
+		cursor: pointer;
+	}
+	header.main-header button:hover {
+		background: white;
+		color: blue;
+	}
+	/* side bar of the website */
+
+	section.aside-wrapper {
+		display: none;
+		position: absolute;
+		background-color: rgba(221, 221, 221, 0.493);
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 2;
+		width: 100vw;
+		height: 100vh;
+	}
+	aside.main-aside {
+		display: flex;
+		flex-direction: column;
+		background: rgb(205, 205, 223);
+		padding: 19px;
+		width: 39vw;
+		float: right;
+	}
+
+	/* section subscribe */
+
+	section.subscribe {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		margin-left: 2px;
+		padding: 19px 5px;
+		width: 90vw;
+	}
+
+	section.subscribe p {
+		font-size: 17px;
+		padding: 7px;
+		background-color: rgba(255, 255, 0, 0.26);
+		border-radius: 9px;
+		color: white;
+	}
+
+	section.subscribe input {
+		margin-left: 16px;
+		font-size: 17px;
+		padding: 9px;
+		border-radius: 9px;
+		border: green 1px solid;
+		outline: none;
+		width: 30vw;
+	}
+
+	section.subscribe button {
+		margin-left: 13px;
+		background-color: rgba(255, 1, 1, 0.726);
+		color: white;
+		font-size: 17px;
+		padding: 7px;
+		border-radius: 9px;
+		border: rgb(0, 19, 128) 1px solid;
+		outline: none;
+		cursor: pointer;
+	}
+}
+
+/* 
+        MAX WIDTH 890PX
+*/
+@media (max-width: 890px) and (min-width: 670px) {
+	nav.main-nav {
+		display: none;
+	}
+
+	/* 
+		Header of the page
+*/
+	header.main-header {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 1vw;
+		background: rgba(9, 9, 196, 0.712);
+		color: white;
+		width: auto;
+	}
+
+	header.main-header div.pContainer {
+		width: 79vw;
+		height: 23px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+	header.main-header div.pContainer p {
+		width: 79vw;
+		height: 21px;
+		overflow: hidden;
+		font-size: 15px;
+	}
+	div#login-profile-name {
+		font-size: 12px;
+	}
+	div.login-logo {
+		margin-left: 5px;
+		margin-right: 5px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	header.main-header button {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		width: 6vw;
+		color: white;
+		background: rgba(9, 9, 196, 0.281);
+		border: none;
+	}
+
+	header.main-header button i {
+		padding: 1px 2px;
+		font-size: 29px;
+		cursor: pointer;
+	}
+	header.main-header button:hover {
+		background: white;
+		color: blue;
+	}
+	/* side bar of the website */
+
+	section.aside-wrapper {
+		display: none;
+		position: absolute;
+		background-color: rgba(221, 221, 221, 0.493);
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 2;
+		width: 100vw;
+		height: 100vh;
+	}
+	aside.main-aside {
+		display: flex;
+		flex-direction: column;
+		background: rgb(205, 205, 223);
+		padding: 19px;
+		width: 39vw;
+		float: right;
+	}
+
+	/* section subscribe */
+
+	section.subscribe {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		margin-left: 12px;
+		padding: 19px 5px;
+		width: 90vw;
+	}
+
+	section.subscribe p {
+		font-size: 20px;
+		padding: 9px;
+		background-color: rgba(255, 255, 0, 0.26);
+		border-radius: 9px;
+		color: white;
+	}
+
+	section.subscribe input {
+		margin-left: 16px;
+		font-size: 21px;
+		padding: 11px;
+		border-radius: 9px;
+		border: green 1px solid;
+		outline: none;
+		width: 30vw;
+	}
+
+	section.subscribe button {
+		margin-left: 16px;
+		background-color: rgba(255, 1, 1, 0.726);
+		color: white;
+		font-size: 20px;
+		padding: 9px;
+		border-radius: 9px;
+		border: rgb(0, 19, 128) 1px solid;
+		outline: none;
+		cursor: pointer;
+	}
+}

@@ -1,6 +1,6 @@
 # Everyday Smarter
 
-This is the repository of my portfolio.
+This is the repository of my portfolio or my own website.
 
 I collected my projects and coding experience in one page on this [web page](https://everydaysmarter.herokuapp.com/projects.html).
 

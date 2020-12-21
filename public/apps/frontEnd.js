@@ -30,8 +30,8 @@ closeMenu.onclick = function () {
 let p_width = 0;
 let margin_left = 70;
 //welcomeParagraph.style.width = "0vw";
-function moveParagraph(params) {
-	p_width = p_width + 0.8;
+function moveParagraph() {
+	// p_width = p_width + 0.8;
 	margin_left = margin_left - 0.15;
 
 	//welcomeParagraph.style.width = `${p_width}vw`;
@@ -60,14 +60,14 @@ let optionsArray = [
 	"skew(17deg, 13deg)",
 	"skewX(17deg)",
 	"skewY(17deg)",
-	"translate(100px, 100px)",
-	"translateX(100px)",
-	"translateY(100px)",
-	"translateZ(100px)",
+	"translate(50px, 50px)",
+	"translateX(50px)",
+	"translateY(50px)",
+	"translateZ(50px)",
 	"translate3d(50px, 50px, 50px)",
-	"perspective(200px)",
-	"matrix(1, 2, -1, 1, 80, 80)",
-	"matrix3d(1,0,0,0,0,1,3,0,0,0,1,0,50,100,0,1.1)",
+	"perspective(100px)",
+	"matrix(1, 2, -1, 1, 50, 50)",
+	"matrix3d(1,0,0,0,0,1,3,0,0,0,1,0,50,50,0,1.1)",
 ];
 
 let i = 0;
@@ -87,8 +87,8 @@ let optionsArrayTwo = [
 	"rotateX(270deg)",
 	"rotateX(360deg)",
 	"rotateY(90deg)",
-	"rotateY(180deg)",
 	"rotateY(270deg)",
+	"rotateY(90deg)",
 	"rotateY(360deg)",
 	"rotateZ(90deg)",
 	"rotateZ(180deg)",
