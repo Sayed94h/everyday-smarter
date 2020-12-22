@@ -22,14 +22,14 @@ img {
 
 article.main-article {
 	line-height: 25px;
-	margin-left: 25vw;
-	margin-right: 25vw;
+	margin-left: 19vw;
+	margin-right: 19vw;
 	margin-bottom: 35px;
 }
 /* 
-		max width 390px
+		max width 490px
 */
-@media (max-width: 390px) {
+@media (max-width: 490px) {
 	/* style for the main part of the web page */
 
 	main article.main-article h3 {
@@ -61,13 +61,13 @@ article.main-article {
 }
 
 /* 
-		max width 490px
+		max width 690px
 */
-@media (max-width: 490px) and (min-width: 390px) {
+@media (max-width: 690px) and (min-width: 490px) {
 	/* style for the main part of the web page */
 
 	main article.main-article h3 {
-		font-size: 12px;
+		font-size: 14px;
 		margin-top: 19px;
 	}
 	section.intro-header {
@@ -77,7 +77,7 @@ article.main-article {
 		align-content: center;
 	}
 	section.contents * {
-		font-size: 13px;
+		font-size: 14px;
 	}
 
 	img {
@@ -86,7 +86,7 @@ article.main-article {
 	}
 
 	article.main-article {
-		line-height: 16px;
+		line-height: 18px;
 		margin-left: 3vw;
 		margin-right: 3vw;
 		margin-bottom: 35px;

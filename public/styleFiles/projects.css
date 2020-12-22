@@ -13,7 +13,7 @@ article.group-projects {
 	margin-bottom: 30px;
 }
 section.project-header {
-	border-bottom: 4px dotted rgb(27, 124, 15);
+	border-bottom: 6px dotted rgba(29, 131, 8, 0.952);
 	text-align: center;
 }
 section.direct-project {
@@ -38,31 +38,34 @@ section.project-description {
 }
 
 section.project-description p:first-child {
-	background-color: rgb(24, 124, 4);
+	background-color: rgba(31, 122, 241, 0.5);
 	margin-left: 14%;
 	margin-right: 14%;
 	padding: 3% 4%;
 	border-radius: inherit;
 	font-size: 16px;
 	font-weight: bold;
+	border: 2px rgb(0, 110, 255) solid;
 }
 section.project-sources {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+	align-content: center;
+	align-items: center;
 }
 
-section.direct-project h2 {
+section.project-sources h2 {
 	color: #fff;
 	background-color: #000;
 	cursor: pointer;
 	border-radius: 9px;
 	padding: 4px 5px;
 }
-section.direct-project h2:hover {
+section.project-sources h2:hover {
 	background-color: green;
 }
-section.direct-project h2 a {
+section.project-sources h2 a {
 	color: #fff;
 	text-decoration: none;
 }
