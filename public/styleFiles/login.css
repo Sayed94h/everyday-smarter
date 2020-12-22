@@ -1,138 +1,3 @@
-body {
-	margin: 0;
-	padding: 0;
-	font-family: Verdana;
-}
-
-nav.main-nav {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	padding: 17px;
-	background: black;
-}
-
-nav.main-nav a {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-items: center;
-	justify-items: center;
-	text-decoration: none;
-	color: rgb(255, 255, 255);
-	font-size: 17px;
-	padding: 4px 3px;
-}
-
-nav.main-nav a:hover {
-	background: white;
-	color: blue;
-	text-shadow: rgb(0, 255, 13) 2px 2px 2px;
-	border-radius: 5px;
-}
-
-header.main-header {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	padding: 15px;
-	background: rgba(9, 9, 196, 0.712);
-	color: white;
-	font-weight: bold;
-	font-size: 22px;
-}
-
-header.main-header div.pContainer {
-	width: 80vw;
-	height: 45px;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-}
-header.main-header div.pContainer p {
-	width: 80vw;
-	height: 30px;
-	overflow: hidden;
-}
-div#login-profile-name {
-	font-size: 15px;
-}
-div.login-logo {
-	margin-left: 16px;
-	margin-right: 16px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-header.main-header button {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	width: 4vw;
-	color: white;
-	background: rgba(9, 9, 196, 0.281);
-	border: none;
-}
-
-header.main-header button i {
-	font-size: 28px;
-	cursor: pointer;
-}
-header.main-header button:hover {
-	background: white;
-	color: blue;
-}
-/* side bar of the website */
-
-section.aside-wrapper {
-	display: none;
-	position: absolute;
-	background-color: rgba(221, 221, 221, 0.493);
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	z-index: 2;
-	width: 100vw;
-	height: 100vh;
-}
-aside.main-aside {
-	display: flex;
-	flex-direction: column;
-	background: rgb(205, 205, 223);
-	padding: 19px;
-	width: 20vw;
-	float: right;
-}
-div#close-menu {
-	padding: 5px 3px;
-	background-color: red;
-	color: white;
-	font-weight: bold;
-	font-size: 19px;
-	width: 25px;
-	text-align: center;
-	border-radius: 20%;
-	cursor: pointer;
-}
-
-aside.main-aside section {
-	display: flex;
-	flex-direction: column;
-}
-aside.main-aside section p {
-	border-bottom: 1px green solid;
-}
-aside.main-aside a,
-aside.main-aside section a {
-	text-align: left;
-	text-decoration: none;
-	color: rgb(27, 13, 228);
-	margin-top: 11px;
-}
-
 /* 
 		style for the main part of the page
 */
@@ -175,57 +40,49 @@ main section.login-container input[type="button"] {
 	width: 10vw;
 	cursor: pointer;
 }
-/* section subscribe */
 
-section.subscribe-wrapper {
-	background: radial-gradient(
-		circle at 46%,
-		rgb(18, 18, 158),
-		rgb(14, 121, 156),
-		rgb(141, 118, 40),
-		blue
-	);
-}
-section.subscribe {
-	display: flex;
-	flex-direction: row;
-	align-content: center;
-	align-items: center;
+/* 
+		max width 890px
+*/
 
-	margin-left: 10vw;
-	padding: 19px 22px;
-}
-
-section.subscribe p {
-	margin-left: 15px;
-	font-size: 24px;
-	padding: 11px;
-	background-color: rgba(255, 255, 0, 0.26);
-	border-radius: 9px;
-	color: white;
-}
-
-section.subscribe input {
-	margin-left: 15px;
-	font-size: 23px;
-	padding: 11px;
-	border-radius: 9px;
-	border: green 1px solid;
-	outline: none;
-	width: 40vw;
-}
-
-section.subscribe button {
-	margin-left: 15px;
-	background-color: rgba(255, 1, 1, 0.726);
-	color: white;
-	font-size: 23px;
-	padding: 11px;
-	border-radius: 9px;
-	border: rgb(0, 19, 128) 1px solid;
-	outline: none;
-	cursor: pointer;
-}
-section.subscribe button:hover {
-	background-color: rgb(0, 255, 255);
+@media (max-width: 890px) {
+	main section.login-header {
+		border-bottom: 2px blue solid;
+		border-top: 2px blue solid;
+		padding: 20px 0px;
+		text-align: center;
+		background-color: rgba(0, 0, 255, 0.281);
+	}
+	main section.login-header p:first-child {
+		font-weight: bold;
+		font-size: 19px;
+	}
+	main section.login-header p:last-child {
+		color: red;
+		font-size: 19px;
+	}
+	main section.login-wrapper {
+		background-color: green;
+		border-bottom: 2px blue solid;
+		padding: 30px 0px;
+	}
+	main section.login-container {
+		margin-left: 1vw;
+	}
+	main section.login-container input {
+		width: 26vw;
+		padding: 9px 11px;
+		font-size: 12px;
+		outline: none;
+		border: 2px rgba(0, 128, 0, 0.575) solid;
+		border-radius: 19px;
+	}
+	main section.login-container input[type="button"] {
+		background-color: rgba(29, 40, 139, 0.274);
+		border: 2px rgba(0, 2, 128, 0.637) solid;
+		color: white;
+		width: 25vw;
+		cursor: pointer;
+		font-size: 15px;
+	}
 }

@@ -12,8 +12,6 @@ section.service-header {
 	border-bottom: 2px green solid;
 }
 section.service-header h2 {
-	margin-left: 10vw;
-	margin-right: 10vw;
 	text-align: center;
 	background-color: blueviolet;
 	color: white;
@@ -43,12 +41,14 @@ section.service-description {
 	border: 1px rgb(38, 0, 255) solid;
 	border-radius: 18px;
 	background-color: #fff;
+	box-shadow: rgba(128, 128, 128, 0.747) 2px 3px 3px 4px;
 }
 
 section.service-pricing {
 	border: 2px solid rgb(43, 255, 0);
 	border-radius: 18px;
 	background-color: #fff;
+	box-shadow: rgba(63, 158, 39, 0.719) 2px 2px 1px 2px;
 }
 
 section.service-list p:last-child {
@@ -69,8 +69,6 @@ section.service-list p:last-child {
 		border-bottom: 2px green solid;
 	}
 	section.service-header h2 {
-		margin-left: 1vw;
-		margin-right: 1vw;
 		text-align: center;
 		background-color: blueviolet;
 		color: white;
@@ -113,10 +111,10 @@ section.service-list p:last-child {
 }
 
 /* 
-		max width 490px
+		max width 590px
 */
 
-@media (max-width: 490px) and (min-width: 390px) {
+@media (max-width: 590px) and (min-width: 390px) {
 	main article.service-wrapper {
 		margin: 2vw 2vw;
 		background-color: rgba(255, 255, 255, 0.274);
@@ -126,8 +124,6 @@ section.service-list p:last-child {
 		border-bottom: 2px green solid;
 	}
 	section.service-header h2 {
-		margin-left: 1vw;
-		margin-right: 1vw;
 		text-align: center;
 		background-color: blueviolet;
 		color: white;
@@ -138,6 +134,59 @@ section.service-list p:last-child {
 	section.service-list {
 		display: flex;
 		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-between;
+		margin-top: 15px;
+	}
+	section.service-list p:first-child {
+		text-align: center;
+		padding-top: 7px;
+		padding-bottom: 7px;
+		font-weight: bold;
+		background-color: blue;
+		border-radius: 9px;
+		color: white;
+	}
+
+	section.service-description {
+		border: 1px rgb(38, 0, 255) solid;
+		border-radius: 18px;
+		background-color: #fff;
+	}
+
+	section.service-pricing {
+		border: 2px solid rgb(43, 255, 0);
+		border-radius: 18px;
+		background-color: #fff;
+	}
+
+	section.service-list p:last-child {
+		padding: 1px 7px;
+	}
+}
+/* 
+		last query media --- max width 790px
+*/
+@media (max-width: 790px) and (min-width: 590px) {
+	main article.service-wrapper {
+		margin: 2vw 2vw;
+		background-color: rgba(255, 255, 255, 0.274);
+		border-radius: 19px;
+	}
+	section.service-header {
+		border-bottom: 2px green solid;
+	}
+	section.service-header h2 {
+		text-align: center;
+		background-color: blueviolet;
+		color: white;
+		border-bottom: 1px solid blue;
+		padding: 7px 9px;
+		border-radius: 15px;
+	}
+	section.service-list {
+		display: flex;
+		flex-direction: row;
 		align-items: flex-start;
 		justify-content: space-between;
 		margin-top: 15px;

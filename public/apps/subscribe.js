@@ -1,7 +1,7 @@
 "use strict";
 
-const feedbackContainer = document.getElementById("error-feedback");
-const userEmail = document.getElementById("userEmail");
+const feedbackCont = document.getElementById("error-feedback");
+const userE = document.getElementById("userEmail");
 const subscribeButton = document.getElementById("subscribe");
 const EMFContainer = document.querySelector(".EMF-container");
 
@@ -9,7 +9,7 @@ const subscribeFunction = async () => {
 	const res = await fetch("/api/subscribedList", {
 		method: "POST",
 		body: JSON.stringify({
-			userEmail: userEmail.value,
+			userEmail: userE.value,
 		}),
 		headers: {
 			"content-type": "application/json; charset=UTF-8",
@@ -29,12 +29,12 @@ const subscribeFunction = async () => {
 		"text-align: center;" +
 		"font-weight: bold;" +
 		"color: red;";
-	feedbackContainer.textContent = `${data.message}`;
-	userEmail.value = "";
+	feedbackCont.textContent = `${data.message}`;
+	userE.value = "";
 };
 
 subscribeButton.onclick = subscribeFunction;
-userEmail.onkeyup = function (event) {
+userE.onkeyup = function (event) {
 	if (event.keyCode === 13) {
 		subscribeFunction();
 	}

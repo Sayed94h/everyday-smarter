@@ -1,203 +1,21 @@
-body {
-	margin: 0;
-	padding: 0;
-	font-family: Verdana;
-}
-.current {
-	background-color: green;
-	border-radius: 5px;
-	padding: 2px;
-}
-nav.main-nav {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	padding: 17px;
-	background: black;
-}
-
-nav.main-nav a {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-items: center;
-	justify-items: center;
-	text-decoration: none;
-	color: rgb(255, 255, 255);
-	font-size: 17px;
-	padding: 4px 3px;
-}
-
-nav.main-nav a:hover {
-	background: white;
-	color: blue;
-	text-shadow: rgb(0, 255, 13) 2px 2px 2px;
-	border-radius: 5px;
-}
-
-header.main-header {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	padding: 15px;
-	background: rgba(9, 9, 196, 0.712);
-	color: white;
-	font-weight: bold;
-	font-size: 22px;
-}
-
-header.main-header div.pContainer {
-	width: 90vw;
-	height: 45px;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-}
-header.main-header div.pContainer p {
-	width: 88vw;
-	height: 30px;
-	overflow: hidden;
-}
-
-header.main-header button {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	width: 4vw;
-	color: white;
-	background: rgba(9, 9, 196, 0.281);
-	border: none;
-}
-
-header.main-header button i {
-	font-size: 28px;
-	cursor: pointer;
-}
-header.main-header button:hover {
-	background: white;
-	color: blue;
-}
-/* side bar of the website */
-
-section.aside-wrapper {
-	display: none;
-	position: absolute;
-	background-color: rgba(221, 221, 221, 0.493);
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	z-index: 2;
-	width: 100vw;
-	height: 100vh;
-}
-aside.main-aside {
-	display: flex;
-	flex-direction: column;
-	background: rgb(205, 205, 223);
-	padding: 19px;
-	width: 20vw;
-	float: right;
-}
-div#close-menu {
-	padding: 5px 3px;
-	background-color: red;
-	color: white;
-	font-weight: bold;
-	font-size: 19px;
-	width: 25px;
-	text-align: center;
-	border-radius: 20%;
-	cursor: pointer;
-}
-
-aside.main-aside section {
-	display: flex;
-	flex-direction: column;
-}
-aside.main-aside section p {
-	border-bottom: 1px green solid;
-}
-aside.main-aside a,
-aside.main-aside section a {
-	text-align: left;
-	text-decoration: none;
-	color: rgb(27, 13, 228);
-	margin-top: 11px;
-}
-button#menu:hover > aside.main-aside {
-	display: flex;
-}
-
-/* section subscribe */
-
-section.subscribe-wrapper {
-	background: radial-gradient(
-		circle at 46%,
-		rgb(18, 18, 158),
-		rgb(14, 121, 156),
-		rgb(141, 118, 40),
-		blue
-	);
-}
-section.subscribe {
-	display: flex;
-	flex-direction: row;
-	align-content: center;
-	align-items: center;
-
-	margin-left: 10vw;
-	padding: 19px 22px;
-}
-
-section.subscribe p {
-	margin-left: 15px;
-	font-size: 24px;
-	padding: 11px;
-	background-color: rgba(255, 255, 0, 0.26);
-	border-radius: 9px;
-	color: white;
-}
-
-section.subscribe input {
-	margin-left: 15px;
-	font-size: 23px;
-	padding: 11px;
-	border-radius: 9px;
-	border: green 1px solid;
-	outline: none;
-	width: 40vw;
-}
-
-section.subscribe button {
-	margin-left: 15px;
-	background-color: rgba(255, 1, 1, 0.726);
-	color: white;
-	font-size: 23px;
-	padding: 11px;
-	border-radius: 9px;
-	border: rgb(0, 19, 128) 1px solid;
-	outline: none;
-	cursor: pointer;
-}
-section.subscribe button:hover {
-	background-color: rgb(0, 255, 255);
-}
-
 /* 
 		style for the main part of the website
 */
 main article {
 	background-color: rgba(0, 128, 0, 0.048);
 }
+main article section.hobby-header {
+	width: 90vw;
+}
 main article section.hobby-header p {
 	font-weight: bold;
 	text-align: center;
 	font-size: 28px;
+	width: inherit;
 }
 span.green-hdr {
 	color: green;
+	text-align: center;
 }
 main article section.hobby-list-wrapper {
 	margin: 20px 18px;
@@ -218,7 +36,7 @@ main article section.hobby-description {
 		),
 		linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
 		linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
-	width: 30vw;
+	width: 50vw;
 	padding: 5px 8px;
 }
 
@@ -230,7 +48,7 @@ main article section.hobby-demo {
 	margin-left: 10px;
 	background-color: green;
 	color: white;
-	width: 60vw;
+	width: 45vw;
 	text-align: center;
 	display: flex;
 	justify-content: center;
@@ -245,4 +63,76 @@ main article section.hobby-demo:hover {
 		),
 		linear-gradient(127deg, rgb(0, 17, 255), rgba(255, 0, 221, 0.37) 70.71%),
 		linear-gradient(336deg, rgb(255, 0, 76), rgba(0, 0, 255, 0.377) 70.71%);
+}
+
+/* 
+    max width 490px
+*/
+
+@media (max-width: 690px) {
+	main article section.hobby-header {
+		width: 90vw;
+	}
+	main article section.hobby-list {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		align-content: center;
+		margin-top: 15px;
+	}
+	main article section.hobby-description {
+		text-align: center;
+		background: linear-gradient(
+				217deg,
+				rgba(255, 0, 0, 0.8),
+				rgba(255, 0, 0, 0) 70.71%
+			),
+			linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+			linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+		width: 90vw;
+		padding: 5px 8px;
+		margin-top: 20px;
+	}
+	main article section.hobby-demo {
+		display: none;
+	}
+}
+
+/* 
+    max width 690px
+*/
+
+@media (max-width: 890px) and (min-width: 690px) {
+	main article section.hobby-header {
+		width: 90vw;
+	}
+	main article section.hobby-list {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		margin-top: 15px;
+	}
+	main article section.hobby-description {
+		text-align: center;
+		background: linear-gradient(
+				217deg,
+				rgba(255, 0, 0, 0.8),
+				rgba(255, 0, 0, 0) 70.71%
+			),
+			linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+			linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+		width: 60vw;
+		padding: 5px 8px;
+	}
+	main article section.hobby-demo {
+		margin-left: 10px;
+		background-color: green;
+		color: white;
+		width: 35vw;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 }
