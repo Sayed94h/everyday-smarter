@@ -19,6 +19,12 @@ const interactionsPath = path.join(
 	"..",
 	"/data/interactions-interestings.json"
 );
+const babyboyNamesPath = path.join(__dirname, "..", "/data/babyboysname.json");
+const babygirlNamesPath = path.join(
+	__dirname,
+	"..",
+	"/data/babygirlsname.json"
+);
 const handlers = {
 	translateText: (req, res, next) => {
 		const text = req.body.text;
@@ -327,6 +333,90 @@ const handlers = {
 				});
 			}
 		);
+	},
+	getBabyNames: async (req, res, next) => {
+		let girlBoy = req.params.name;
+		let sortList = req.query.sort;
+		// console.log("girlBoy general: ", girlBoy);
+		// set the path to the asked name list by users
+		let setDataPath = "";
+		if (girlBoy === "girl") {
+			setDataPath = babygirlNamesPath;
+		}
+		if (girlBoy === "boy") {
+			setDataPath = babyboyNamesPath;
+		}
+		// read the name list
+		let readJson = await fs.readFile(setDataPath, "UTF-8", (err, data) => {
+			if (err) {
+				console.error("Error from readingfile getbabynames: ", err);
+				res.send(`Something went wrong please try again`);
+			}
+			let parsedData = JSON.parse(data);
+			if (sortList === "ASC" || sortList === "DESC") {
+				let onlyNames = [];
+				parsedData.names.forEach(function (a, b) {
+					onlyNames.push(a.name);
+				});
+				if (sortList === "ASC") {
+					res.send(onlyNames.sort());
+					return;
+				}
+				if (sortList === "DESC") {
+					res.send(onlyNames.sort().reverse());
+					return;
+				}
+				return;
+			}
+			res.send(parsedData.names);
+		});
+	},
+	getBabyNamesById: async (req, res, next) => {
+		let girlBoy = req.params.name;
+		let nameId = Number(req.params.id);
+		console.log("girlBoy id: ", girlBoy);
+		// if (girlBoy !== "boy" || girlBoy !== "girl") {
+		// 	console.log("From logic Id");
+		// 	res.send(`How to use this API?<br>1. Get all 1000 names of baby boy:<br>
+		//  https://everydaysmarter.herokuapp.com/api/babyNames/boy
+		//  <br>2. Get all 1000 names of baby girl:<br> https://everydaysmarter.herokuapp.com/api/babyNames/girl
+		//  <br>3. Get one name of baby girl by Id:<br>
+		//  https://everydaysmarter.herokuapp.com/api/babyNames/girl/a number(1-1000)
+		//  <br>4. Get one name of baby boy by Id:<br>
+		//  https://everydaysmarter.herokuapp.com/api/babyNames/boy/a number(1-1000)
+		//  <br>5. Get all 1000 names of baby girl and sort them ascending:<br>
+		//  https://everydaysmarter.herokuapp.com/api/babyNames/girl?sort=ASC
+		//  <br>6. Get all 1000 names of baby boy and sort them ascending :<br>
+		//  https://everydaysmarter.herokuapp.com/api/babyNames/boy?sort=ASC
+		//  <br>7. Get all 1000 names of baby girl and sort them descending:<br>
+		//  https://everydaysmarter.herokuapp.com/api/babyNames/girl?sort=DESC
+		//  <br>8. Get all 1000 names of baby boy and sort them descending:<br>
+		//  https://everydaysmarter.herokuapp.com/api/babyNames/boy?sort=DESC`);
+		// 	return;
+		// }
+		// set the path to the asked name list by users
+		let setDataPath = "";
+		if (girlBoy === "girl") {
+			setDataPath = babygirlNamesPath;
+		}
+		if (girlBoy === "boy") {
+			setDataPath = babyboyNamesPath;
+		}
+		// read the name list
+		let readJson = await fs.readFile(setDataPath, "UTF-8", (err, data) => {
+			if (err) {
+				console.error("Error from readingfile getbabynames: ", err);
+				res.send(`Something went wrong please try again`);
+			}
+			let parsedData = JSON.parse(data);
+			// send the name with the asked ID by users
+			if (nameId !== "") {
+				let toSendName = parsedData.names.filter((name) => name.id === nameId);
+				res.send(toSendName);
+				return;
+			}
+			res.send(parsedData.names);
+		});
 	},
 };
 

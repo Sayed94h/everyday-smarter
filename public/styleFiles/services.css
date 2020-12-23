@@ -22,7 +22,7 @@ section.service-header h2 {
 section.service-list {
 	display: grid;
 	grid-template-columns: 3fr 2fr;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: space-between;
 	margin-top: 15px;
 }

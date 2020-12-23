@@ -15,4 +15,6 @@ router.post("/interactions", handlers.updateInteractions);
 router.post("/subscribedList", handlers.subscribedList);
 router.get("/interactions", handlers.getInteractions);
 router.get("/interactionsOnload", handlers.getInteractionsOnload);
+router.get("/babyNames/:name", handlers.getBabyNames);
+router.get("/babyNames/:name/:id", handlers.getBabyNamesById);
 module.exports = router;
