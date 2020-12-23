@@ -3,6 +3,7 @@ export class Repositories {
 	html_url = null;
 	name = null;
 	language = null;
+	languages_url = null;
 	description = null;
 	id = null;
 	updated_at = null;
@@ -26,7 +27,7 @@ export class Repositories {
 		let tableCol4 = document.createElement("td");
 		tableCol4.appendChild(aEl);
 		let tableCol5 = document.createElement("td");
-		tableCol5.textContent = `${this.language}`;
+		tableCol5.innerHTML = `${this.language} and <a href="${this.languages_url}" target="_blank">see all languages</a>`;
 		let tableCol6 = document.createElement("td");
 		tableCol6.textContent = `${this.updated_at}`;
 
