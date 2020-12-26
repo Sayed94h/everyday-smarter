@@ -26,16 +26,14 @@ closeMenu.onclick = function () {
 /* 
 	for welcome paragraph
 */
-let p_width = 0;
-let margin_left = 70;
-//welcomeParagraph.style.width = "0vw";
+let left = 70;
 function moveParagraph() {
 	// p_width = p_width + 0.8;
-	margin_left = margin_left - 0.15;
+	left = left - 0.15;
 	//welcomeParagraph.style.width = `${p_width}vw`;
-	welcomeParagraph.style.marginLeft = `${margin_left}vw`;
-	if (margin_left < 1) {
-		margin_left = 70;
+	welcomeParagraph.style.left = `${left}vw`;
+	if (left < -70) {
+		left = 70;
 	}
 }
 setInterval(moveParagraph, 15);
