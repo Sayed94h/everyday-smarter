@@ -11,8 +11,8 @@ main article {
 	margin-bottom: 30px;
 }
 section.form-header {
-	width: 85vw;
-	margin-left: 7vw;
+	width: 60%;
+	margin-left: 20%;
 }
 section.form-header p {
 	background-color: #fff;
@@ -85,11 +85,10 @@ section.form-section button {
 		background-color: rgba(5, 53, 53, 0.5);
 		padding: 3%;
 	}
-	/*
-		contact form
-	
-	*/
-
+	section.form-header {
+		width: 90%;
+		margin-left: 3%;
+	}
 	section.form-section div.label {
 		background-color: rgba(11, 13, 49, 0.8);
 		color: #fff;
@@ -134,18 +133,17 @@ section.form-section button {
 	}
 }
 
-@media (max-width: 530px) and (min-width: 390px) {
+@media (max-width: 730px) and (min-width: 390px) {
 	main article {
 		width: 90%;
 		margin-left: 3%;
 		background-color: rgba(15, 116, 116, 0.5);
 		padding: 2%;
 	}
-	/*
-		contact form
-	
-	*/
-
+	section.form-header {
+		width: 90%;
+		margin-left: 3%;
+	}
 	section.form-section div.label {
 		background-color: rgba(11, 13, 49, 0.8);
 		color: #fff;

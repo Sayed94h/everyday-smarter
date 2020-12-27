@@ -54,20 +54,17 @@ header.main-header div.pContainer {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	z-index: 2;
 	overflow: hidden;
 }
 header.main-header div.pContainer p {
 	position: relative;
-	width: 80vw;
-	height: 30px;
-	z-index: 0;
-	overflow-x: hidden;
+	height: 40px;
+	overflow: visible;
+	white-space: nowrap;
 }
 
 div#login-profile-name {
 	font-size: 15px;
-	z-index: 2;
 }
 div.login-logo {
 	margin-left: 16px;
@@ -84,13 +81,13 @@ header.main-header button {
 	align-items: center;
 	width: 4vw;
 	color: white;
-	background: rgba(9, 9, 196, 0.281);
+	cursor: pointer;
 	border: none;
+	background-color: transparent;
 }
 
 header.main-header button i {
 	font-size: 28px;
-	cursor: pointer;
 }
 header.main-header button:hover {
 	background: white;
@@ -107,8 +104,7 @@ section.aside-wrapper {
 	left: 0;
 	right: 0;
 	z-index: 5;
-	width: 100vw;
-	height: 100vh;
+	overflow-y: scroll;
 }
 aside.main-aside {
 	display: flex;
@@ -202,49 +198,47 @@ section.subscribe button {
 section.subscribe button:hover {
 	background-color: rgb(0, 255, 255);
 }
-
+/* 
+		max width 390px
+*/
 @media (max-width: 390px) {
-	.current {
-		background-color: green;
-		border-radius: 5px;
-		padding: 2px;
-	}
 	nav.main-nav {
 		display: none;
 	}
-
-	/* 
-		Header of the page
-*/
 	header.main-header {
 		display: flex;
 		flex-direction: row;
+		justify-content: space-around;
+		align-content: center;
 		align-items: center;
-		padding: 0.8vw;
+		padding: 15px;
 		background: rgba(9, 9, 196, 0.712);
 		color: white;
-		width: auto;
+		font-weight: bold;
+		font-size: 22px;
 	}
-
 	header.main-header div.pContainer {
-		width: 69vw;
-		height: 23px;
+		height: 28px;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
+		z-index: 2;
 	}
 	header.main-header div.pContainer p {
-		width: 69vw;
-		height: 21px;
-		overflow: hidden;
+		position: relative;
+		height: 25px;
+		z-index: 0;
 		font-size: 15px;
+		white-space: nowrap;
+		overflow: visible;
 	}
 	div#login-profile-name {
 		font-size: 11px;
+		z-index: 2;
 	}
 	div.login-logo {
-		margin-left: 5px;
-		margin-right: 5px;
+		margin-left: 16px;
+		margin-right: 16px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -255,16 +249,12 @@ section.subscribe button:hover {
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
-		width: 5vw;
+		width: 6vw;
 		color: white;
-		background: rgba(9, 9, 196, 0.281);
-		border: none;
-	}
-
-	header.main-header button i {
-		padding: 1px 2px;
-		font-size: 26px;
 		cursor: pointer;
+	}
+	header.main-header button i {
+		font-size: 28px;
 	}
 	header.main-header button:hover {
 		background: white;
@@ -280,9 +270,7 @@ section.subscribe button:hover {
 		bottom: 0;
 		left: 0;
 		right: 0;
-		z-index: 2;
-		width: 100vw;
-		height: 100vh;
+		z-index: 5;
 	}
 	aside.main-aside {
 		display: flex;
@@ -292,9 +280,7 @@ section.subscribe button:hover {
 		width: 37vw;
 		float: right;
 	}
-
 	/* section subscribe */
-
 	section.subscribe {
 		display: flex;
 		flex-direction: row;
@@ -304,7 +290,6 @@ section.subscribe button:hover {
 		padding: 19px 5px;
 		width: 90vw;
 	}
-
 	section.subscribe p {
 		font-size: 12px;
 		padding: 5px;
@@ -312,7 +297,6 @@ section.subscribe button:hover {
 		border-radius: 9px;
 		color: white;
 	}
-
 	section.subscribe input {
 		margin-left: 13px;
 		font-size: 13px;
@@ -322,7 +306,6 @@ section.subscribe button:hover {
 		outline: none;
 		width: 30vw;
 	}
-
 	section.subscribe button {
 		margin-left: 13px;
 		background-color: rgba(255, 1, 1, 0.726);
@@ -342,10 +325,6 @@ section.subscribe button:hover {
 	nav.main-nav {
 		display: none;
 	}
-
-	/* 
-		Header of the page
-*/
 	header.main-header {
 		display: flex;
 		flex-direction: row;
@@ -355,7 +334,6 @@ section.subscribe button:hover {
 		color: white;
 		width: auto;
 	}
-
 	header.main-header div.pContainer {
 		width: 75vw;
 		height: 23px;
@@ -364,10 +342,12 @@ section.subscribe button:hover {
 		align-items: center;
 	}
 	header.main-header div.pContainer p {
-		width: 75vw;
+		position: relative;
+		overflow: visible;
+		white-space: nowrap;
+		z-index: 0;
 		height: 21px;
-		overflow: hidden;
-		font-size: 15px;
+		font-size: 16px;
 	}
 	div#login-profile-name {
 		font-size: 11px;
@@ -379,6 +359,7 @@ section.subscribe button:hover {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		z-index: 2;
 	}
 	header.main-header button {
 		display: flex;
@@ -387,8 +368,7 @@ section.subscribe button:hover {
 		align-items: center;
 		width: 5vw;
 		color: white;
-		background: rgba(9, 9, 196, 0.281);
-		border: none;
+		z-index: 2;
 	}
 
 	header.main-header button i {
@@ -401,7 +381,6 @@ section.subscribe button:hover {
 		color: blue;
 	}
 	/* side bar of the website */
-
 	section.aside-wrapper {
 		display: none;
 		position: absolute;
@@ -422,9 +401,7 @@ section.subscribe button:hover {
 		width: 39vw;
 		float: right;
 	}
-
 	/* section subscribe */
-
 	section.subscribe {
 		display: flex;
 		flex-direction: row;
@@ -434,7 +411,6 @@ section.subscribe button:hover {
 		padding: 19px 5px;
 		width: 90vw;
 	}
-
 	section.subscribe p {
 		font-size: 12px;
 		padding: 5px;
@@ -442,7 +418,6 @@ section.subscribe button:hover {
 		border-radius: 9px;
 		color: white;
 	}
-
 	section.subscribe input {
 		margin-left: 13px;
 		font-size: 13px;
@@ -452,7 +427,6 @@ section.subscribe button:hover {
 		outline: none;
 		width: 30vw;
 	}
-
 	section.subscribe button {
 		margin-left: 13px;
 		background-color: rgba(255, 1, 1, 0.726);
@@ -465,7 +439,6 @@ section.subscribe button:hover {
 		cursor: pointer;
 	}
 }
-
 /* 
         MAX WIDTH 670PX
 */
@@ -473,10 +446,6 @@ section.subscribe button:hover {
 	nav.main-nav {
 		display: none;
 	}
-
-	/* 
-		Header of the page
-*/
 	header.main-header {
 		display: flex;
 		flex-direction: row;
@@ -486,7 +455,6 @@ section.subscribe button:hover {
 		color: white;
 		width: auto;
 	}
-
 	header.main-header div.pContainer {
 		width: 77vw;
 		height: 23px;
@@ -495,10 +463,12 @@ section.subscribe button:hover {
 		align-items: center;
 	}
 	header.main-header div.pContainer p {
-		width: 77vw;
+		position: relative;
+		overflow: visible;
+		white-space: nowrap;
+		z-index: 0;
 		height: 21px;
-		overflow: hidden;
-		font-size: 15px;
+		font-size: 18px;
 	}
 	div#login-profile-name {
 		font-size: 11px;
@@ -510,6 +480,7 @@ section.subscribe button:hover {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		z-index: 2;
 	}
 	header.main-header button {
 		display: flex;
@@ -518,8 +489,7 @@ section.subscribe button:hover {
 		align-items: center;
 		width: 5vw;
 		color: white;
-		background: rgba(9, 9, 196, 0.281);
-		border: none;
+		z-index: 2;
 	}
 
 	header.main-header button i {
@@ -532,7 +502,6 @@ section.subscribe button:hover {
 		color: blue;
 	}
 	/* side bar of the website */
-
 	section.aside-wrapper {
 		display: none;
 		position: absolute;
@@ -542,8 +511,6 @@ section.subscribe button:hover {
 		left: 0;
 		right: 0;
 		z-index: 2;
-		width: 100vw;
-		height: 100vh;
 	}
 	aside.main-aside {
 		display: flex;
@@ -553,9 +520,7 @@ section.subscribe button:hover {
 		width: 39vw;
 		float: right;
 	}
-
 	/* section subscribe */
-
 	section.subscribe {
 		display: flex;
 		flex-direction: row;
@@ -565,7 +530,6 @@ section.subscribe button:hover {
 		padding: 19px 5px;
 		width: 90vw;
 	}
-
 	section.subscribe p {
 		font-size: 17px;
 		padding: 7px;
@@ -573,7 +537,6 @@ section.subscribe button:hover {
 		border-radius: 9px;
 		color: white;
 	}
-
 	section.subscribe input {
 		margin-left: 16px;
 		font-size: 17px;
@@ -583,7 +546,6 @@ section.subscribe button:hover {
 		outline: none;
 		width: 30vw;
 	}
-
 	section.subscribe button {
 		margin-left: 13px;
 		background-color: rgba(255, 1, 1, 0.726);
@@ -596,7 +558,6 @@ section.subscribe button:hover {
 		cursor: pointer;
 	}
 }
-
 /* 
         MAX WIDTH 890PX
 */
@@ -604,10 +565,6 @@ section.subscribe button:hover {
 	nav.main-nav {
 		display: none;
 	}
-
-	/* 
-		Header of the page
-*/
 	header.main-header {
 		display: flex;
 		flex-direction: row;
@@ -617,7 +574,6 @@ section.subscribe button:hover {
 		color: white;
 		width: auto;
 	}
-
 	header.main-header div.pContainer {
 		width: 79vw;
 		height: 23px;
@@ -626,10 +582,11 @@ section.subscribe button:hover {
 		align-items: center;
 	}
 	header.main-header div.pContainer p {
-		width: 79vw;
+		position: relative;
 		height: 21px;
-		overflow: hidden;
-		font-size: 15px;
+		overflow: visible;
+		white-space: nowrap;
+		font-size: 19px;
 	}
 	div#login-profile-name {
 		font-size: 12px;
@@ -641,6 +598,7 @@ section.subscribe button:hover {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		z-index: 2;
 	}
 	header.main-header button {
 		display: flex;
@@ -649,10 +607,8 @@ section.subscribe button:hover {
 		align-items: center;
 		width: 6vw;
 		color: white;
-		background: rgba(9, 9, 196, 0.281);
-		border: none;
+		z-index: 2;
 	}
-
 	header.main-header button i {
 		padding: 1px 2px;
 		font-size: 29px;
@@ -663,7 +619,6 @@ section.subscribe button:hover {
 		color: blue;
 	}
 	/* side bar of the website */
-
 	section.aside-wrapper {
 		display: none;
 		position: absolute;
@@ -672,9 +627,7 @@ section.subscribe button:hover {
 		bottom: 0;
 		left: 0;
 		right: 0;
-		z-index: 2;
-		width: 100vw;
-		height: 100vh;
+		z-index: 5;
 	}
 	aside.main-aside {
 		display: flex;
@@ -684,9 +637,7 @@ section.subscribe button:hover {
 		width: 39vw;
 		float: right;
 	}
-
 	/* section subscribe */
-
 	section.subscribe {
 		display: flex;
 		flex-direction: row;
@@ -696,7 +647,6 @@ section.subscribe button:hover {
 		padding: 19px 5px;
 		width: 90vw;
 	}
-
 	section.subscribe p {
 		font-size: 20px;
 		padding: 9px;
@@ -704,7 +654,6 @@ section.subscribe button:hover {
 		border-radius: 9px;
 		color: white;
 	}
-
 	section.subscribe input {
 		margin-left: 16px;
 		font-size: 21px;
@@ -714,7 +663,6 @@ section.subscribe button:hover {
 		outline: none;
 		width: 30vw;
 	}
-
 	section.subscribe button {
 		margin-left: 16px;
 		background-color: rgba(255, 1, 1, 0.726);

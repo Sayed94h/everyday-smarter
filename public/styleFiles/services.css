@@ -1,7 +1,9 @@
 /* 
 		style for the main part of the website
 */
-
+p.huge-p {
+	word-break: break-all;
+}
 main article.service-wrapper {
 	margin: 4vw 10vw;
 	background-color: rgba(255, 255, 255, 0.274);
@@ -165,9 +167,9 @@ section.service-list p:last-child {
 	}
 }
 /* 
-		last query media --- max width 790px
+		last query media --- max width 890px
 */
-@media (max-width: 790px) and (min-width: 590px) {
+@media (max-width: 890px) and (min-width: 590px) {
 	main article.service-wrapper {
 		margin: 2vw 2vw;
 		background-color: rgba(255, 255, 255, 0.274);
