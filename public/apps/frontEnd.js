@@ -27,12 +27,12 @@ closeMenu.onclick = function () {
 /* 
 	for welcome paragraph
 */
-let left = 70;
+let left = 90;
 function moveParagraph() {
 	left = left - 0.15;
 	welcomeParagraph.style.left = `${left}vw`;
-	if (left < -70) {
-		left = 70;
+	if (left < -90) {
+		left = 90;
 	}
 }
 setInterval(moveParagraph, 15);

@@ -162,7 +162,7 @@ section.binary-wrapper {
 section.emoji-wrapper h4,
 section.keycode-wrapper h4,
 section.binary-wrapper h4 {
-	margin: 2vw 12vw;
+	margin: 2vw 8vw;
 	padding-bottom: 9px;
 	border-bottom: 2px gold solid;
 }
