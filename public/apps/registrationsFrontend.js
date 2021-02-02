@@ -14,6 +14,7 @@ const submitButton = document.getElementById("signup");
 const feedbackContainer = document.getElementById("feedback-container");
 
 const sendFormData = async () => {
+	feedbackContainer.textContent = "";
 	const res = await fetch(`/api/registrations`, {
 		method: "POST",
 		body: JSON.stringify({
@@ -37,11 +38,22 @@ const sendFormData = async () => {
 		feedbackContainer.textContent = "Something went wrong, please try again!";
 	}
 	// no error
-
 	const data = await res.json();
+	if (data.message === "Success") {
+		redirectUser();
+		return;
+	}
 	feedbackContainer.textContent = `${data.message}`;
 };
 
+const redirectUser = async () => {
+	const res = await fetch("/api/redirectAfterRegistration");
+	if (!res.ok && res.status !== 200) {
+		console.error(res);
+		return;
+	}
+	console.log("Res from redirect: ", res);
+};
 submitButton.onclick = sendFormData;
 
 gender.onchange = function (event) {

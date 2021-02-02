@@ -19,3 +19,9 @@
 1. Notifications ❌
 1. Very responsive and accessible ❌💹
 1. Email API ❌
+1. Check users email/phone for duplication during the registration
+1. Check that the email input is really a valid email address or phone number
+1. Redirect the user to login page after registration or log the user in immediately after registration
+1. Keep user logged in until he/she logs him/her self out
+1. Let user react with their login credential
+1.

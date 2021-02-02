@@ -18,8 +18,6 @@ const c10 = document.querySelector(".c10");
 const c11 = document.querySelector(".c11");
 const c12 = document.querySelector(".c12");
 const c13 = document.querySelector(".c13");
-
-// console.log(interactionContainer.firstElementChild);
 // container one
 // for the first post
 let love = 0;
@@ -77,32 +75,77 @@ async function getInteractionsOnload() {
 	c12.textContent = `${like4}`;
 	c13.textContent = `${dislike4}`;
 }
-getInteractionsOnload();
-// on update
-async function getInteractions() {
-	const res = await fetch(`/api/interactions`);
+window.onload = function () {
+	getInteractionsOnload();
+	return;
+};
+
+// on update or on each click
+async function getInteractions(varName) {
+	const res = await fetch(`/api/interactions/${varName}`);
 	if (!res.ok) {
 		console.error("Error from getInteractions: ", res);
 		return;
 	}
 	const data = await res.json();
-	love = data.love;
-	like = data.like;
-	dislike = data.dislike;
-	loveTwo = data.loveTwo;
-	likeTwo = data.likeTwo;
-	dislikeTwo = data.dislikeTwo;
-	loveThree = data.loveThree;
-	likeThree = data.likeThree;
-	dislikeThree = data.dislikeThree;
-	love4 = data.love4;
-	like4 = data.like4;
-	dislike4 = data.dislike4;
-	videoOne_views = data.videoOne_views;
+	console.log("res with data: ", data);
+	// `${data.varToSet}` = `${data.varValue}`;
+	if (data.varToSet === "love") {
+		love = data.varValue;
+		return;
+	}
+	if (data.varToSet === "like") {
+		like = data.varValue;
+		return;
+	}
+	if (data.varToSet === "dislike") {
+		dislike = data.varValue;
+		return;
+	}
+	if (data.varToSet === "loveTwo") {
+		loveTwo = data.varValue;
+		return;
+	}
+	if (data.varToSet === "likeTwo") {
+		likeTwo = data.varValue;
+		return;
+	}
+	if (data.varToSet === "dislikeTwo") {
+		dislikeTwo = data.varValue;
+		return;
+	}
+	if (data.varToSet === "loveThree") {
+		loveThree = data.varValue;
+		return;
+	}
+	if (data.varToSet === "likeThree") {
+		likeThree = data.varValue;
+		return;
+	}
+	if (data.varToSet === "dislikeThree") {
+		dislikeThree = data.varValue;
+		return;
+	}
+	if (data.varToSet === "love4") {
+		love4 = data.varValue;
+		return;
+	}
+	if (data.varToSet === "like4") {
+		like4 = data.varValue;
+		return;
+	}
+	if (data.varToSet === "dislike4") {
+		dislike4 = data.varValue;
+		return;
+	}
+	if (data.varToSet === "videoOne_views") {
+		videoOne_views = data.varValue;
+		return;
+	}
 }
 
 const updateInteractions = async (variable, score) => {
-	const res = await fetch(`/api/interactions`, {
+	const res = await fetch(`/api/Updateinteractions`, {
 		method: "POST",
 		body: JSON.stringify({
 			[variable]: score,
@@ -115,8 +158,9 @@ const updateInteractions = async (variable, score) => {
 		console.error("error form updateInteractions: ", res);
 		return;
 	}
-	// const data = await res.json();
-	// console.log("data update: ", data);
+	const data = await res.json();
+	console.log("data update: ", data);
+	return;
 };
 
 function clickHandlerOne(event) {
@@ -124,22 +168,25 @@ function clickHandlerOne(event) {
 	// let lastEl = event.target.parentElement.lastElementChild;
 	// console.log(event.target.className);
 	if (event.target.className === "material-icons red") {
-		getInteractions();
+		getInteractions("love");
 		let score = love + 1;
 		updateInteractions("love", score);
 		firsEl.textContent = `${score}`;
+		return;
 	}
 	if (event.target.className === "material-icons blue") {
-		getInteractions();
+		getInteractions("like");
 		let score = like + 1;
 		updateInteractions("like", score);
 		firsEl.textContent = `${score}`;
+		return;
 	}
 	if (event.target.className === "material-icons black") {
-		getInteractions();
+		getInteractions("dislike");
 		let score = dislike + 1;
 		updateInteractions("dislike", score);
 		firsEl.textContent = `${score}`;
+		return;
 	}
 }
 
@@ -148,23 +195,26 @@ function clickHandlerTwo(event) {
 	// let lastEl = event.target.parentElement.lastElementChild;
 	// console.log(event.target.className);
 	if (event.target.className === "material-icons red") {
-		getInteractions();
+		getInteractions("loveTwo");
 		let score = loveTwo + 1;
 		updateInteractions("loveTwo", score);
 		firsEl.textContent = `${score}`;
+		return;
 	}
 
 	if (event.target.className === "material-icons blue") {
-		getInteractions();
+		getInteractions("likeTwo");
 		let score = likeTwo + 1;
 		updateInteractions("likeTwo", score);
 		firsEl.textContent = `${score}`;
+		return;
 	}
 	if (event.target.className === "material-icons black") {
-		getInteractions();
+		getInteractions("dislikeTwo");
 		let score = dislikeTwo + 1;
 		updateInteractions("dislikeTwo", score);
 		firsEl.textContent = `${score}`;
+		return;
 	}
 }
 
@@ -173,23 +223,26 @@ function clickHandlerThree(event) {
 	// let lastEl = event.target.parentElement.lastElementChild;
 	// console.log(event.target.className);
 	if (event.target.className === "material-icons red") {
-		getInteractions();
+		getInteractions("loveThree");
 		let score = loveThree + 1;
 		updateInteractions("loveThree", score);
 		firsEl.textContent = `${score}`;
+		return;
 	}
 
 	if (event.target.className === "material-icons blue") {
-		getInteractions();
+		getInteractions("likeThree");
 		let score = likeThree + 1;
 		updateInteractions("likeThree", score);
 		firsEl.textContent = `${score}`;
+		return;
 	}
 	if (event.target.className === "material-icons black") {
-		getInteractions();
+		getInteractions("dislikeThree");
 		let score = dislikeThree + 1;
 		updateInteractions("dislikeThree", score);
 		firsEl.textContent = `${score}`;
+		return;
 	}
 }
 
@@ -198,23 +251,26 @@ function clickHandler4(event) {
 	// let lastEl = event.target.parentElement.lastElementChild;
 	// console.log(event.target.className);
 	if (event.target.className === "material-icons red") {
-		getInteractions();
+		getInteractions("love4");
 		let score = love4 + 1;
 		updateInteractions("love4", score);
 		firsEl.textContent = `${score}`;
+		return;
 	}
 
 	if (event.target.className === "material-icons blue") {
-		getInteractions();
+		getInteractions("like4");
 		let score = like4 + 1;
 		updateInteractions("like4", score);
 		firsEl.textContent = `${score}`;
+		return;
 	}
 	if (event.target.className === "material-icons black") {
-		getInteractions();
+		getInteractions("dislike4");
 		let score = dislike4 + 1;
 		updateInteractions("dislike4", score);
 		firsEl.textContent = `${score}`;
+		return;
 	}
 }
 
@@ -224,8 +280,9 @@ interactionContainerThree.onclick = clickHandlerThree;
 interactionContainerFour.onclick = clickHandler4;
 
 videoOne.onclick = function () {
-	getInteractions();
+	getInteractions("videoOne_views");
 	let score = videoOne_views + 1;
 	updateInteractions("videoOne_views", score);
-	document.querySelector(".videoOneView").textContent = `${score}`;
+	c10.textContent = `${score}`;
+	return;
 };

@@ -1,12 +1,19 @@
 {
-    "nextId": 2,
-    "messages": [
-        {
-            "id": 1,
-            "name": "Admin",
-            "email": "admin@testing.dev",
-            "subject": "Testing",
-            "message": "Thanks for working properly!"
-        }
-    ]
+	"nextId": 3,
+	"messages": [
+		{
+			"id": 1,
+			"name": "Admin",
+			"email": "admin@testing.dev",
+			"subject": "Testing",
+			"message": "Thanks for working properly!"
+		},
+		{
+			"name": "Sayed",
+			"email": "",
+			"subject": "Test from local machine",
+			"message": "Test from local machine",
+			"id": 2
+		}
+	]
 }

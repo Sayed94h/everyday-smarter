@@ -1,24 +1,18 @@
 {
- "nextId": 1,
- "interactions": {
-  "love": 7,
-  "like": 8,
-  "dislike": 0,
-  "loveTwo": 7,
-  "likeTwo": 2,
-  "dislikeTwo": 0,
-  "loveThree": 5,
-  "likeThree": 1,
-  "dislikeThree": 0,
-  "love4": 4,
-  "like4": 1,
-  "dislike4": 0,
-  "love5": 0,
-  "like5": 0,
-  "dislike5": 0,
-  "love6": 0,
-  "like7": 0,
-  "dislike8": 0,
-  "videoOne_views": 5
- }
+  "nextId": 1,
+  "interactions": {
+    "love": 30,
+    "like": 13,
+    "dislike": 0,
+    "loveTwo": 17,
+    "likeTwo": 15,
+    "dislikeTwo": 1,
+    "loveThree": 5,
+    "likeThree": 4,
+    "dislikeThree": 0,
+    "love4": 4,
+    "like4": 6,
+    "dislike4": 1,
+    "videoOne_views": 9
+  }
 }
