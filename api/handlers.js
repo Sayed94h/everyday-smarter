@@ -1,7 +1,7 @@
 const translate = require("moji-translate");
 const path = require("path");
 const fs = require("fs");
-const { response } = require("express");
+const { response } = require("express"); // why I added this line?????
 const messagesPath = path.join(__dirname, "..", "/data/messages.json");
 const subscribedListPath = path.join(
 	__dirname,
@@ -51,7 +51,7 @@ const handlers = {
 				console.error("Error from reading database, contactForm: ", err);
 				res.json({
 					message:
-						"Something went wrong, please try again!\nWe will fix this problem",
+						"Something went wrong. We will fix this problem. Please try again!",
 				});
 				return;
 			}
@@ -124,7 +124,17 @@ const handlers = {
 	},
 	registrations: async (req, res, next) => {
 		let formData = req.body;
-		console.log("FromData: ", formData);
+		let newDate = new Date();
+		let dateToString = newDate.toString();
+		let dateToArray = dateToString.split(" ");
+		let day = dateToArray[2];
+		let month = dateToArray[1];
+		let year = newDate.getFullYear();
+		let msecond = newDate.getMilliseconds();
+		let timeZone = dateToArray[5];
+		let hour = dateToArray[4];
+		let registrationDate = `${day}-${month}-${year} ${hour}:${msecond}  ${timeZone}`;
+		// console.log("FromData: ", formData);
 		// check the gender and set the correct users gender
 		let gender = "";
 		if (formData.customGender === "") {
@@ -132,7 +142,6 @@ const handlers = {
 		} else {
 			gender = formData.customGender;
 		}
-
 		let readDatabase = await fs.readFile(
 			registrationsPath,
 			"UTF-8",
@@ -156,7 +165,9 @@ const handlers = {
 					birth_month: formData.birth_month,
 					birth_day: formData.birth_day,
 					birth_year: formData.birth_year,
+					registrationDate: registrationDate,
 					gender: gender,
+					loggedin: false,
 				};
 				// increase the nextId by one
 				parsedData.nextId++;
@@ -173,16 +184,19 @@ const handlers = {
 					}
 					// if no error at registering user
 					res.json({
-						message: `Dear ${formData.Firstname}, you are now successfully registered in the system. Thank you for joing us!`,
+						message: "Success",
 					});
 				});
 			}
 		);
 	},
+	redirectAfterRegistration: async (req, res, next) => {
+		let fileToSend = path.join(__dirname, "..", "/public/login.html");
+		// console.log("fileToSend: ", fileToSend);
+		await res.sendFile(fileToSend);
+	},
 	login: async (req, res, next) => {
 		let formData = req.body;
-		console.log("FromData: ", formData);
-
 		let readDatabase = await fs.readFile(
 			registrationsPath,
 			"UTF-8",
@@ -217,7 +231,6 @@ const handlers = {
 	getUserProfile: async (req, res, next) => {
 		let username = req.params.name;
 		let password = req.params.password;
-
 		let readDatabase = await fs.readFile(
 			registrationsPath,
 			"UTF-8",
@@ -232,7 +245,10 @@ const handlers = {
 				// if no error at reading database
 				let parsedData = JSON.parse(data);
 				let exactUser = parsedData.users.filter(
-					(user) => user.Email === username && user.Password === password
+					(user) =>
+						user.loggedin === true &&
+						user.Email === username &&
+						user.Password === password
 				);
 				console.log("exactUser: ", exactUser);
 				res.json({
@@ -243,20 +259,27 @@ const handlers = {
 		);
 	},
 	getInteractions: async (req, res, next) => {
+		let varName = req.params.name;
 		let readDatabase = await fs.readFile(
 			interactionsPath,
 			"UTF-8",
 			(err, data) => {
 				if (err) {
 					console.error("Error from getInteractions: ", err);
+					res.json({
+						message: "Error reading database to send to client",
+					});
 					return;
 				}
 				// if no error at reading database
 				let parsedData = JSON.parse(data);
-				console.log("parsedData getInter: ", parsedData.interactions);
-				res.send(parsedData.interactions);
+				res.json({
+					varToSet: varName,
+					varValue: parsedData.interactions[`${varName}`],
+				});
 			}
 		);
+		return;
 	},
 	getInteractionsOnload: async (req, res, next) => {
 		let readDatabase = await fs.readFile(
@@ -265,13 +288,17 @@ const handlers = {
 			(err, data) => {
 				if (err) {
 					console.error("Error from getInteractionsOnload: ", err);
+					res.json({
+						message: "Error reading database to send to client",
+					});
 					return;
 				}
 				// if no error at reading database
 				let parsedData = JSON.parse(data);
-				res.send(parsedData.interactions);
+				res.json(parsedData.interactions);
 			}
 		);
+		return;
 	},
 	updateInteractions: async (req, res, next) => {
 		const userInter = req.body;
@@ -285,11 +312,14 @@ const handlers = {
 			(err, data) => {
 				if (err) {
 					console.error("Error from updateInteractions: ", err);
+					res.json({
+						message: "Error reading database to update",
+					});
 					return;
 				} // if no error at reading database
 				let parsedData = JSON.parse(data);
 				parsedData.interactions[keys[0]] = userInter[keys[0]];
-				let toWrite = JSON.stringify(parsedData, null, " ");
+				let toWrite = JSON.stringify(parsedData, null, "  ");
 				let saveChanges = fs.writeFile(interactionsPath, toWrite, (err) => {
 					if (err) {
 						console.error("Error from updateInteractions: ", err);
@@ -298,10 +328,13 @@ const handlers = {
 						});
 						return;
 					}
-					res.end();
+					res.json({
+						message: "success",
+					});
 				});
 			}
 		);
+		return;
 	},
 	subscribedList: async (req, res, next) => {
 		const userInter = req.body;
@@ -321,7 +354,7 @@ const handlers = {
 				let saveChanges = fs.writeFile(subscribedListPath, toWrite, (err) => {
 					if (err) {
 						console.error("Error from subscribedList write file: ", err);
-						response.send({
+						res.send({
 							message:
 								"We are sorry. We could not add you to subscribtion list. Please try again!",
 						});

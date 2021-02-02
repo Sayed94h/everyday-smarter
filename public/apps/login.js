@@ -3,6 +3,9 @@ const username = document.getElementById("username");
 const userPass = document.getElementById("password");
 const submitButton = document.getElementById("submitButon");
 const feedbackContainer = document.getElementById("feedback-errors");
+const loginProfileName = document.getElementById("login-profile-name");
+
+// Shared object across all pages
 export let userProfile = {};
 
 const sendLoginCredential = async () => {
@@ -28,7 +31,7 @@ const sendLoginCredential = async () => {
 	feedbackContainer.textContent = `${data.message}`;
 	if (data.message === "Success") {
 		console.log("check it out: ", data.message);
-		getUsersName(username.value, password.value);
+		getUsersName(username.value, userPass.value);
 	}
 };
 
@@ -43,6 +46,7 @@ const getUsersName = async (username, password) => {
 	// no error
 
 	const data = await res.json();
+	loginProfileName.textContent = `${data.firstname}`;
 	userProfile.firstname = data.firstname;
 	userProfile.lastname = data.lastname;
 };
@@ -54,5 +58,3 @@ userPass.onkeyup = function (event) {
 		sendLoginCredential();
 	}
 };
-
-console.log(userProfile);
