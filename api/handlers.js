@@ -83,6 +83,22 @@ const handlers = {
 			});
 		});
 	},
+	getMessages: async (req, res, next) => {
+		let readDatabase = await fs.readFile(messagesPath, "UTF-8", (err, data) => {
+			if (err) {
+				console.error("Error from reading database, contactForm: ", err);
+				res.json({
+					message:
+						"Something went wrong. We will fix this problem. Please try again!",
+				});
+				return;
+			}
+			let parsedData = JSON.parse(data);
+			// data to send
+
+			res.json(parsedData.messages);
+		});
+	},
 	feedbackForm: async (req, res, next) => {
 		const feedbackData = req.body;
 		let readDatabase = await fs.readFile(feedbackPath, "UTF-8", (err, data) => {
