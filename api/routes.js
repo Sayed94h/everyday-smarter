@@ -6,6 +6,7 @@ const handlers = require("./handlers.js");
 
 router.post("/text-to-emoji", handlers.translateText);
 router.post("/contactForm", handlers.contactForm);
+router.get("/messages", handlers.getMessages);
 router.post("/feedbackForm", handlers.feedbackForm);
 router.post("/registrations", handlers.registrations);
 router.get("/redirectAfterRegistration", handlers.redirectAfterRegistration);
