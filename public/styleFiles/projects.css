@@ -14,7 +14,22 @@ article.group-projects {
 }
 section.project-header {
 	border-bottom: 6px dotted rgba(29, 131, 8, 0.952);
+}
+section.project-header h2 {
 	text-align: center;
+}
+p.top-paragraph {
+	width: 60vw;
+	margin-left: 15vw;
+	text-align: justify;
+	line-height: 26px;
+}
+p.top-paragraph span {
+	background: #000;
+	color: #fff;
+	border-radius: 5px;
+	font-weight: bold;
+	padding: 2px 3px;
 }
 section.direct-project {
 	display: flex;
