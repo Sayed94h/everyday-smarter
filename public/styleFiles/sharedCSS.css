@@ -159,7 +159,6 @@ section.subscribe {
 	flex-direction: row;
 	align-content: center;
 	align-items: center;
-
 	margin-left: 10vw;
 	padding: 19px 22px;
 }
@@ -564,7 +563,7 @@ section.subscribe button:focus {
 /* 
         MAX WIDTH 890PX
 */
-@media (max-width: 890px) and (min-width: 670px) {
+@media (max-width: 750px) and (min-width: 670px) {
 	nav.main-nav {
 		display: none;
 	}
@@ -641,6 +640,46 @@ section.subscribe button:focus {
 		width: 39vw;
 		float: right;
 	}
+	/* section subscribe */
+	section.subscribe {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		margin-left: 12px;
+		padding: 19px 5px;
+		width: 90vw;
+	}
+	section.subscribe p {
+		font-size: 20px;
+		padding: 9px;
+		background-color: rgba(255, 255, 0, 0.26);
+		border-radius: 9px;
+		color: white;
+	}
+	section.subscribe input {
+		margin-left: 16px;
+		font-size: 21px;
+		padding: 11px;
+		border-radius: 9px;
+		border: green 1px solid;
+		outline: none;
+		width: 30vw;
+	}
+	section.subscribe button {
+		margin-left: 16px;
+		background-color: rgba(255, 1, 1, 0.726);
+		color: white;
+		font-size: 20px;
+		padding: 9px;
+		border-radius: 9px;
+		border: rgb(0, 19, 128) 1px solid;
+		outline: none;
+		cursor: pointer;
+	}
+}
+
+@media (max-width: 980px) and (min-width: 750px) {
 	/* section subscribe */
 	section.subscribe {
 		display: flex;
