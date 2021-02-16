@@ -172,8 +172,8 @@ footer p.copyright {
 	}
 
 	footer.footer section.container-footer {
-		display: grid;
-		grid-template-columns: auto auto auto;
+		display: flex;
+		flex-direction: row;
 		justify-content: space-around;
 	}
 
