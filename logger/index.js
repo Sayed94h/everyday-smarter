@@ -15,7 +15,7 @@ const logs = (req, res, next) => {
 			console.error("Error from writing logs: ", err);
 		}
 	});
-	console.log(reqResults);
+	// console.log(reqResults);
 	next();
 };
 
