@@ -117,34 +117,14 @@ function binaryConverter(event) {
 	// in case users enter other numbers than 0 and 1
 	if (binNum.match(/[2-9]+/)) {
 		const wrapper = document.createElement("div");
-		wrapper.style =
-			"position: fixed;" +
-			"top:0;" +
-			"bottom:0;" +
-			"left:0;" +
-			"right:0;" +
-			"background: rgba(0,0,0,0.5);";
+		wrapper.className = "alert-wrapper";
 		const container = document.createElement("div");
-		container.style =
-			"width: 30vw;" +
-			"margin: 10vw 33vw;" +
-			"display: flex;" +
-			"flex-direction: column;" +
-			"align-items: center;" +
-			"background:#fff;" +
-			"border-radius: 9px;" +
-			"padding: 3px;";
+		container.className = "alert-container";
 		const message = document.createElement("p");
 		const confirmButton = document.createElement("button");
-		message.textContent = "Please enter only 1 and 0";
+		message.textContent =
+			"Please enter only the digits 1(one) and 0(zero) because it's binary!";
 		confirmButton.textContent = "OK";
-		confirmButton.style =
-			"padding: 3px 6px;" +
-			"background:#00f;" +
-			"color: #fff;" +
-			"outline: #99f;" +
-			"font-size: 19px;" +
-			"border-radius: 5px;";
 		document.body.appendChild(wrapper);
 		wrapper.appendChild(container);
 		container.appendChild(message);
@@ -153,15 +133,15 @@ function binaryConverter(event) {
 			binaryInput.value = "";
 			decimalContainer.value = "";
 			wrapper.style.display = "none";
-			return;
 		};
+	} else {
+		let inputArray = binNum.split("");
+		let powerOf = inputArray.length;
+		let decimalNum = 0;
+		for (let i = 0; i < powerOf; i++) {
+			decimalNum += inputArray[i] * Math.pow(2, powerOf - (i + 1));
+		}
+		decimalContainer.value = ` ${decimalNum}`;
 	}
-	let inputArray = binNum.split("");
-	let powerOf = inputArray.length;
-	let decimalNum = 0;
-	for (let i = 0; i < powerOf; i++) {
-		decimalNum += inputArray[i] * Math.pow(2, powerOf - (i + 1));
-	}
-	decimalContainer.textContent = ` ${decimalNum}`;
 }
 binaryInput.onkeyup = binaryConverter;
