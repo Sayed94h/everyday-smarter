@@ -1,7 +1,10 @@
 /* 
 	section showcase
 */
-
+.red-text {
+	color: red;
+	font-weight: bold;
+}
 section.showcase {
 	width: auto;
 	padding: 5vw;
@@ -148,7 +151,110 @@ section div.six {
 	transform: rotateY(90deg) translateZ(50px);
 }
 
-/* end of section showcase (transition , animation, transform) */
+/* End of section showcase (transition , animation, transform) */
+
+/* Math Game */
+
+section.game-wrapper {
+	width: 97vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin-top: 15px;
+}
+section.game-container {
+	width: 96vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+section.score-box {
+	width: 20vw;
+	background-color: rgb(226, 64, 172);
+	text-align: center;
+}
+section.score-box p:first-child {
+	font-weight: bold;
+	font-size: 25px;
+	color: rgb(97, 6, 77);
+}
+section.score-box p:last-child {
+	font-size: 25px;
+	color: rgb(255, 255, 255);
+}
+section.game-console {
+	width: 70vw;
+}
+section.game-header p:last-child {
+	border-bottom: 1px solid gray;
+	padding-bottom: 8px;
+}
+section.game-header p:first-child {
+	font-size: 25px;
+	font-weight: bold;
+}
+form.math-form {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	margin-bottom: 5px;
+}
+form.math-form div {
+	background-color: #22d;
+	padding: 5px 7px;
+	margin-right: 5px;
+	color: #fff;
+	border-radius: 5px;
+}
+form.math-form select {
+	width: 13vw;
+	padding: 3px 4px;
+	border-radius: 5px;
+	outline: none;
+	border: 1px green solid;
+}
+section.math-box {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 5px 0;
+}
+section.question-answer {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+section.question-answer section.question-box section {
+	width: 14vw;
+	border: 1px gray solid;
+	border-radius: 5px;
+	padding: 5px 8px;
+	text-align: center;
+}
+section.question-answer section.answer-box input {
+	width: 15vw;
+	padding: 6px 8px;
+	border-radius: 5px;
+	margin: 5px 15px;
+	outline: none;
+	border: 1px green solid;
+}
+section.check-answer button {
+	width: 9vw;
+	padding: 6px 8px;
+	cursor: pointer;
+	background-color: rgba(17, 17, 17, 0.13);
+	color: black;
+	text-align: center;
+	border-radius: 5px;
+	border: 1px rgba(0, 128, 0, 0.301) solid;
+	outline: none;
+	font-weight: bold;
+}
+
+/* End of Math Game */
 
 /* emoji converter */
 
@@ -378,7 +484,104 @@ div.alert-container button {
 	}
 
 	/* end of section showcase (transition , animation, transform) */
+	/* Math Game */
 
+	section.game-wrapper {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		margin-top: 15px;
+	}
+	section.game-container {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+	section.score-box {
+		width: 100%;
+		background-color: rgb(255, 58, 229);
+		text-align: center;
+	}
+	section.score-box p:first-child {
+		font-weight: bold;
+		font-size: 25px;
+		color: rgb(97, 6, 77);
+	}
+	section.score-box p:last-child {
+		font-size: 25px;
+		color: rgb(255, 255, 255);
+	}
+	section.game-console {
+		width: 100%;
+	}
+	section.game-header p {
+		border-bottom: 1px solid gray;
+		padding: 6px;
+	}
+	form.math-form {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		margin-bottom: 5px;
+	}
+	form.math-form div {
+		background-color: #22d;
+		padding: 5px 7px;
+		margin-right: 5px;
+		color: #fff;
+		border-radius: 5px;
+	}
+	form.math-form select {
+		width: 28vw;
+		padding: 3px 4px;
+		border-radius: 5px;
+		outline: none;
+		border: 1px green solid;
+	}
+	section.math-box {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		margin: 5px 0;
+	}
+	section.question-answer {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	section.question-answer section.question-box section {
+		width: 30vw;
+		border: 1px gray solid;
+		border-radius: 5px;
+		padding: 5px 8px;
+		text-align: center;
+	}
+	section.question-answer section.answer-box input {
+		width: 25vw;
+		padding: 6px 8px;
+		border-radius: 5px;
+		margin: 5px 15px;
+		outline: none;
+		border: 1px green solid;
+	}
+	section.check-answer button {
+		width: 20vw;
+		padding: 6px 8px;
+		cursor: pointer;
+		background-color: rgba(17, 17, 17, 0.13);
+		color: black;
+		text-align: center;
+		border-radius: 5px;
+		border: 1px rgba(0, 128, 0, 0.301) solid;
+		outline: none;
+		font-weight: bold;
+	}
+
+	/* End of Math Game */
 	/* emoji converter */
 
 	section.emoji-wrapper,
@@ -598,7 +801,104 @@ div.alert-container button {
 	}
 
 	/* end of section showcase (transition , animation, transform) */
+	/* Math Game */
 
+	section.game-wrapper {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		margin-top: 15px;
+	}
+	section.game-container {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+	section.score-box {
+		width: 100%;
+		background-color: purple;
+		text-align: center;
+	}
+	section.score-box p:first-child {
+		font-weight: bold;
+		font-size: 25px;
+		color: rgb(245, 156, 225);
+	}
+	section.score-box p:last-child {
+		font-size: 25px;
+		color: rgb(255, 255, 255);
+	}
+	section.game-console {
+		width: 100%;
+	}
+	section.game-header p {
+		border-bottom: 1px solid gray;
+		padding: 6px;
+	}
+	form.math-form {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		margin-bottom: 5px;
+	}
+	form.math-form div {
+		background-color: #22d;
+		padding: 5px 7px;
+		margin-right: 5px;
+		color: #fff;
+		border-radius: 5px;
+	}
+	form.math-form select {
+		width: 24vw;
+		padding: 3px 4px;
+		border-radius: 5px;
+		outline: none;
+		border: 1px green solid;
+	}
+	section.math-box {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		margin: 5px 0;
+	}
+	section.question-answer {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	section.question-answer section.question-box section {
+		width: 30vw;
+		border: 1px gray solid;
+		border-radius: 5px;
+		padding: 5px 8px;
+		text-align: center;
+	}
+	section.question-answer section.answer-box input {
+		width: 25vw;
+		padding: 6px 8px;
+		border-radius: 5px;
+		margin: 5px 15px;
+		outline: none;
+		border: 1px green solid;
+	}
+	section.check-answer button {
+		width: 20vw;
+		padding: 6px 8px;
+		cursor: pointer;
+		background-color: rgba(17, 17, 17, 0.13);
+		color: black;
+		text-align: center;
+		border-radius: 5px;
+		border: 1px rgba(0, 128, 0, 0.301) solid;
+		outline: none;
+		font-weight: bold;
+	}
+
+	/* End of Math Game */
 	/* emoji converter */
 
 	section.emoji-wrapper,

@@ -14,7 +14,6 @@ section.intro-header {
 	align-content: center;
 	justify-content: space-between;
 }
-
 img {
 	width: 30%;
 	border-radius: 50%;
@@ -64,7 +63,25 @@ article.main-article h3 {
 		width: 96vw;
 	}
 }
-
+section.print {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+section.print a {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin: 1vw 5vw;
+	background-color: #fff;
+	padding: 5px 7px;
+	color: blue;
+	border: 1px gray solid;
+	border-radius: 4px;
+	cursor: pointer;
+	width: 75px;
+}
 /* 
 		max width 690px
 */
@@ -96,5 +113,23 @@ article.main-article h3 {
 		margin-right: 3vw;
 		margin-bottom: 35px;
 		width: 94vw;
+	}
+}
+
+@media print {
+	header.main-header *,
+	section.aside-wrapper *,
+	section.note,
+	section.print,
+	section.EMF-container,
+	section.subscribe-wrapper,
+	footer {
+		display: none;
+	}
+	section.nav {
+		display: none;
+	}
+	@page {
+		margin: 0.5cm;
 	}
 }
