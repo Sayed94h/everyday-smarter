@@ -10,8 +10,10 @@ const questionSeven = document.getElementById("questionSeven");
 const questionEight = document.getElementById("questionEight");
 const submitFeedback = document.getElementById("submit");
 const feedbackHeader = document.getElementById("feedback-header");
-
+let responseToFeedback = document.createElement("p");
+responseToFeedback.id = "response";
 const fetchFormData = async () => {
+	responseToFeedback.textContent = "";
 	const res = await fetch("/api/feedbackForm", {
 		method: "POST",
 		body: JSON.stringify({
@@ -31,8 +33,6 @@ const fetchFormData = async () => {
 	// if response is not ok
 	if (!res.ok) {
 		console.error("Error from fetchFeedbackData, res is not ok: ", res);
-		let responseToFeedback = document.createElement("p");
-		responseToFeedback.id = "response";
 		responseToFeedback.textContent = "Something went wrong, please try again";
 		feedbackHeader.appendChild(responseToFeedback);
 		return;
@@ -40,8 +40,6 @@ const fetchFormData = async () => {
 	// if res is ok then do the following
 
 	const data = await res.json();
-	let responseToFeedback = document.createElement("p");
-	responseToFeedback.id = "response";
 	responseToFeedback.textContent = ` ${data.message}`;
 
 	feedbackHeader.appendChild(responseToFeedback);

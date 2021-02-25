@@ -78,7 +78,7 @@
 		<!-- showcase -->
 		<section class="container-showcase">
 			<section class="transform-2d">
-				<h1>CODES ARE DANCING!</h1>
+				<h1>CSS<br>POWER!</h1>
 			</section>
 			<section class="transform-3d">
 				<div class="threed front">Change</div>
@@ -98,6 +98,46 @@
 			</section>
 		</section>
 	</section>
+	<!-- Math game -->
+	<section class="game-wrapper">
+		<section class="game-container">
+			<section class="score-box">
+				<p>SCORE</p>
+				<p id="score"></p>
+			</section>
+			<section class="game-console">
+				<section class="game-header">
+					<p>A Small Math Game</p>
+					<p>Please don't use any calculator. Calculate everything in your head. Tye to find an easy way to
+						calculate it fast. Be focused, this improves your
+						concentrations. <span class="red-text">Important!</span> the answer is rounded to integer, so no
+						decimal answer! Example: 1.4
+						= 1, 1.5 = 2, 1.8 = 2, ...</p>
+				</section>
+
+				<form class="math-form">
+					<div><label for="level">Choose a level</label></div>
+					<select name="level" id="level">
+						<option value="9" selected>Easy</option>
+						<option value="99">Medium</option>
+						<option value="999">Hard</option>
+					</select>
+				</form>
+				<section class="math-box">
+					<section class="question-answer">
+						<section class="question-box"></section>
+						<section class="answer-box">
+							<input type="text" id="user-answer" placeholder="Write your answer">
+						</section>
+					</section>
+					<section class="check-answer">
+						<button id="check-btn">CHECK</button>
+					</section>
+				</section>
+			</section>
+		</section>
+	</section>
+	<hr>
 	<!-- video as a demo for emoji translator -->
 	<section class="demo-wrapper">
 		<section class="demo-header">
@@ -252,11 +292,10 @@
 		</p>
 	</footer>
 	<!-- load the js files -->
-	<script src="./apps/frontEnd.js"></script>
+	<script src="./apps/frontEnd.js" type="module"></script>
 	<!-- <script src="./apps/sharedVar.js" type="module"></script> -->
 	<script src="./apps/emoji-translator.js"></script>
 	<script src="./apps/subscribe.js"></script>
-
 </body>
 
 </html>

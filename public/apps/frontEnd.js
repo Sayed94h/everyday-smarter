@@ -1,5 +1,5 @@
 "use strict";
-
+import Math_Game from "./math-game.js";
 const asideWrapper = document.getElementById("aside-wrapper");
 const mainAside = document.querySelector(".main-aside");
 const menu = document.getElementById("menu");
