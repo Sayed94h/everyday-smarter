@@ -99,8 +99,8 @@ function changeStyleTwo() {
 	}
 }
 setInterval(changeStyleTwo, 1200);
-// for keycodes
 
+// for keycodes
 const keyText = document.getElementById("key-input");
 const keyContainer = document.getElementById("keycode-container");
 function keyCodeFinder(event) {
@@ -109,12 +109,11 @@ function keyCodeFinder(event) {
 keyText.onkeyup = keyCodeFinder;
 
 // for binary to decimal
-
 const binaryInput = document.getElementById("binary-input");
-const decimalContainer = document.getElementById("binary-container");
+const decimalContainer = document.getElementById("decimal-container");
 function binaryConverter(event) {
 	let binNum = event.target.value;
-	// in case users enter other numbers than 0 and 1
+	// in case users enter other numbers than 0 and 1 then display a custom alert box
 	if (binNum.match(/[2-9]+/)) {
 		const wrapper = document.createElement("div");
 		wrapper.className = "alert-wrapper";
@@ -139,9 +138,45 @@ function binaryConverter(event) {
 		let powerOf = inputArray.length;
 		let decimalNum = 0;
 		for (let i = 0; i < powerOf; i++) {
-			decimalNum += inputArray[i] * Math.pow(2, powerOf - (i + 1));
+			let eachBinary = Number(inputArray[i]);
+			decimalNum += eachBinary * Math.pow(2, powerOf - (i + 1));
 		}
 		decimalContainer.value = ` ${decimalNum}`;
 	}
 }
 binaryInput.onkeyup = binaryConverter;
+
+// for decimal to binary
+
+const decimalInput = document.getElementById("decimal-input");
+const binaryContainer = document.getElementById("binary-container");
+
+function decimalToBinary(event) {
+	debugger;
+	binaryContainer.value = "";
+	const userInput = event.target.value;
+	let userInputToNumber = Number(userInput);
+	let convertedDecimalToBinary = "";
+	while (userInputToNumber > 0) {
+		let checking = Math.floor(userInputToNumber % 2);
+		console.log(
+			"UserInNum: ",
+			userInputToNumber,
+			"type of UserInNum: ",
+			typeof userInputToNumber
+		);
+		console.log("checking: ", checking, "type of checking: ", typeof checking);
+		if (checking === 0) {
+			convertedDecimalToBinary = "0" + convertedDecimalToBinary;
+		} else {
+			convertedDecimalToBinary = "1" + convertedDecimalToBinary;
+		}
+		userInputToNumber = Math.floor(userInputToNumber / 2);
+	}
+	if (convertedDecimalToBinary.split("").length % 2 > 0) {
+		convertedDecimalToBinary = "0" + convertedDecimalToBinary;
+	}
+	binaryContainer.value = ` ${convertedDecimalToBinary}`;
+}
+
+decimalInput.onkeyup = decimalToBinary;
