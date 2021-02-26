@@ -1,3 +1,6 @@
+:root {
+	--blue: #00b0f0;
+}
 section.note {
 	text-align: center;
 	background-color: #eee;
@@ -7,68 +10,74 @@ section.note {
 }
 
 /* style for the main part of the web page */
-section.intro-header {
+section.profile-image {
 	display: flex;
-	flex-direction: row;
-	align-items: flex-start;
+	flex-direction: column;
+	align-items: center;
 	align-content: center;
-	justify-content: space-between;
 }
 img {
 	width: 30%;
 	border-radius: 50%;
+	margin: 0;
+	padding: 0;
 }
 
 article.main-article {
+	margin: 1vw 5vw;
 	line-height: 25px;
-	margin-left: 19vw;
-	margin-right: 19vw;
-	margin-bottom: 35px;
+	display: flex;
+	flex-direction: row;
+}
+section.profile-info {
+	width: 40vw;
+}
+section.hard-skills {
+	width: 48vw;
+	margin-left: 2vw;
+}
+section.hard-skills section.first ul li {
+	font-weight: bold;
+}
+section.hard-skills section.first ul li ul li {
+	font-weight: normal;
+}
+section.origin {
+	background-color: var(--blue);
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+section.left-part h3,
+section.hard-skills h3 {
+	color: var(--blue);
+}
+section.left-part p,
+section.left-part ul {
+	width: 96%;
+	word-wrap: break-word;
+	text-overflow: ellipsis;
+}
+section.references {
+	display: flex;
+	flex-direction: column;
+}
+section.references a {
+	text-decoration: none;
+	color: black;
+}
+section.left-part {
+	border-right: 2px var(--blue) solid;
 }
 
-article.main-article h3 {
-	margin: 15px 0 0 0;
-	padding: 0;
-}
-/* 
-		max width 490px
-*/
-@media (max-width: 490px) {
-	/* style for the main part of the web page */
-
-	main article.main-article h3 {
-		font-size: 12px;
-		margin-top: 19px;
-	}
-	section.intro-header {
-		display: flex;
-		flex-direction: row;
-		align-items: flex-start;
-		align-content: center;
-	}
-	section.contents * {
-		font-size: 11px;
-	}
-
-	img {
-		width: 20%;
-		border-radius: 50%;
-	}
-
-	article.main-article {
-		line-height: 16px;
-		margin-left: 2vw;
-		margin-right: 2vw;
-		margin-bottom: 35px;
-		width: 96vw;
-	}
-}
+/* for the printing part of the page */
 section.print {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
 }
-section.print a {
+section.print div {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -82,40 +91,6 @@ section.print a {
 	cursor: pointer;
 	width: 75px;
 }
-/* 
-		max width 690px
-*/
-@media (max-width: 690px) and (min-width: 490px) {
-	/* style for the main part of the web page */
-
-	main article.main-article h3 {
-		font-size: 14px;
-		margin-top: 19px;
-	}
-	section.intro-header {
-		display: flex;
-		flex-direction: row;
-		align-items: flex-start;
-		align-content: center;
-	}
-	section.contents * {
-		font-size: 14px;
-	}
-
-	img {
-		width: 20%;
-		border-radius: 50%;
-	}
-
-	article.main-article {
-		line-height: 18px;
-		margin-left: 3vw;
-		margin-right: 3vw;
-		margin-bottom: 35px;
-		width: 94vw;
-	}
-}
-
 @media print {
 	header.main-header *,
 	section.aside-wrapper *,
@@ -131,5 +106,41 @@ section.print a {
 	}
 	@page {
 		margin: 0.5cm;
+	}
+	article.main-article section.origin {
+		background-color: #00b0f0 !important;
+		-webkit-print-color-adjust: exact;
+		color: white;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	article.main-article {
+		margin: 1vw 2vw;
+		line-height: 25px;
+		display: flex;
+		flex-direction: row;
+	}
+}
+/* End of printing part */
+/* 
+		max width 490px
+*/
+@media only screen and (max-width: 780px) {
+	/* style for the main part of the web page */
+	article.main-article {
+		margin: 1vw 5vw;
+		line-height: 25px;
+		display: flex;
+		flex-direction: column;
+	}
+	section.profile-info {
+		width: 100%;
+	}
+	section.hard-skills {
+		width: 100%;
+	}
+	section.left-part {
+		border: none;
 	}
 }

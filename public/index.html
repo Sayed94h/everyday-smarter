@@ -116,18 +116,31 @@
 				</section>
 
 				<form class="math-form">
-					<div><label for="level">Choose a level</label></div>
-					<select name="level" id="level">
-						<option value="9" selected>Easy</option>
-						<option value="99">Medium</option>
-						<option value="999">Hard</option>
-					</select>
+					<div class="container">
+						<div><label for="level">Choose a LeveL</label></div>
+						<select name="level" id="level">
+							<option value="9" selected>Easy</option>
+							<option value="99">Medium</option>
+							<option value="999">Hard</option>
+						</select>
+					</div>
+					<div class="container">
+						<div><label for="operator">Choose an operator</label></div>
+						<select name="operator" id="operator" title="When you select an operator, it will affect at the next
+						question!">
+							<option value="mix" selected>mix</option>
+							<option value="+">+</option>
+							<option value="-">-</option>
+							<option value="*">x</option>
+							<option value="/">÷</option>
+						</select>
+					</div>
 				</form>
 				<section class="math-box">
 					<section class="question-answer">
 						<section class="question-box"></section>
 						<section class="answer-box">
-							<input type="text" id="user-answer" placeholder="Write your answer">
+							<input type="number" id="user-answer" placeholder="Write your answer">
 						</section>
 					</section>
 					<section class="check-answer">
@@ -213,7 +226,7 @@
 			<p>A very short demo for Binary To Decimal Converter</p>
 		</section>
 		<section class="demo-container">
-			<video src="./assets/binary-decimal.mp4" controls autoplay></video>
+			<video src="./assets/binary-decimal.mp4" controls></video>
 		</section>
 	</section>
 	<!-- Binary to decimal -->
@@ -225,15 +238,37 @@
 					<label for="binary-input">Enter Binary</label>
 				</div>
 				<div>
-					<textarea id="binary-input" placeholder="Enter some binary numbers"></textarea>
+					<textarea id="binary-input" placeholder="Enter a binary number"></textarea>
 				</div>
 			</section>
 			<section>
 				<div class="label">
-					<label for="binary-container">Binary to Decimal</label>
+					<label for="decimal-container">Binary to Decimal</label>
 				</div>
 				<div>
-					<textarea id="binary-container" placeholder="Binary converted to decimal"></textarea>
+					<textarea id="decimal-container" placeholder="Binary converted to decimal"></textarea>
+				</div>
+			</section>
+		</section>
+	</section>
+	<!-- Decimal to Binary -->
+	<section class="binary-wrapper">
+		<h4>You can use the below text box to convert Decimal to Binary.</h4>
+		<section class="binary-container">
+			<section>
+				<div class="label">
+					<label for="decimal-input">Enter Decimal</label>
+				</div>
+				<div>
+					<textarea id="decimal-input" placeholder="Enter a decimal number"></textarea>
+				</div>
+			</section>
+			<section>
+				<div class="label">
+					<label for="binary-container">Decimal to Binary</label>
+				</div>
+				<div>
+					<textarea id="binary-container" placeholder="Decimal converted to binary"></textarea>
 				</div>
 			</section>
 		</section>

@@ -199,18 +199,22 @@ form.math-form {
 	justify-content: flex-start;
 	margin-bottom: 5px;
 }
-form.math-form div {
+form.math-form div.container {
 	background-color: #22d;
 	padding: 5px 7px;
 	margin-right: 5px;
 	color: #fff;
 	border-radius: 5px;
 }
+form.math-form div.container div {
+	padding: 3px 0;
+}
 form.math-form select {
 	width: 13vw;
 	padding: 3px 4px;
 	border-radius: 5px;
 	outline: none;
+	margin-right: 5px;
 	border: 1px green solid;
 }
 section.math-box {
@@ -315,7 +319,7 @@ section.demo-container {
 	border: 2px rgb(143, 68, 228) solid;
 }
 section.demo-container video {
-	width: 73.5vw;
+	width: 35vw;
 }
 
 div.alert-wrapper {
@@ -525,13 +529,6 @@ div.alert-container button {
 		flex-direction: row;
 		justify-content: flex-start;
 		margin-bottom: 5px;
-	}
-	form.math-form div {
-		background-color: #22d;
-		padding: 5px 7px;
-		margin-right: 5px;
-		color: #fff;
-		border-radius: 5px;
 	}
 	form.math-form select {
 		width: 28vw;
@@ -842,13 +839,6 @@ div.alert-container button {
 		flex-direction: row;
 		justify-content: flex-start;
 		margin-bottom: 5px;
-	}
-	form.math-form div {
-		background-color: #22d;
-		padding: 5px 7px;
-		margin-right: 5px;
-		color: #fff;
-		border-radius: 5px;
 	}
 	form.math-form select {
 		width: 24vw;

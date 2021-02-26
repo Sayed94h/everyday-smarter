@@ -5,22 +5,35 @@ const checkBtn = document.getElementById("check-btn");
 const question_box = document.querySelector(".question-box");
 const game_level = document.getElementById("level");
 const user_in = document.getElementById("user-answer");
+const math_operator = document.getElementById("operator");
 
 const handler = {
 	operators: ["+", "-", "*", "/"],
 	operatorToDisplay: "",
 	theQuestion: [],
 	operatorSetter: function () {
-		const operator = this.operators[
-			Math.floor(Math.random() * this.operators.length)
-		];
-		this.theQuestion.push(operator);
-		if (operator === "*") {
-			this.operatorToDisplay = "x";
-		} else if (operator === "/") {
-			this.operatorToDisplay = "÷";
+		if (math_operator.value === "mix") {
+			const operator = this.operators[
+				Math.floor(Math.random() * this.operators.length)
+			];
+			this.theQuestion.push(operator);
+			if (operator === "*") {
+				this.operatorToDisplay = "x";
+			} else if (operator === "/") {
+				this.operatorToDisplay = "÷";
+			} else {
+				this.operatorToDisplay = operator;
+			}
 		} else {
-			this.operatorToDisplay = operator;
+			const operator = math_operator.value;
+			this.theQuestion.push(operator);
+			if (operator === "*") {
+				this.operatorToDisplay = "x";
+			} else if (operator === "/") {
+				this.operatorToDisplay = "÷";
+			} else {
+				this.operatorToDisplay = operator;
+			}
 		}
 	},
 	correctAnswer: 0,
