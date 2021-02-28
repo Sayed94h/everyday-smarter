@@ -35,13 +35,20 @@ section.direct-project {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	border: 4px solid rgb(245, 229, 13);
+	border: 2px solid rgb(245, 229, 13);
 	border-radius: 2vw;
 	background: #ccc;
 	margin-bottom: 20px;
 	margin-top: 20px;
 	width: 300px;
 	height: 300px;
+}
+section.direct-project:hover {
+	box-shadow: rgb(231, 137, 15) 7px 5px 1px;
+	background: rgb(16, 212, 180);
+	border: 2px solid rgb(218, 202, 202);
+	width: 300px;
+	height: 320px;
 }
 section.project-description {
 	background: blue;
@@ -51,7 +58,9 @@ section.project-description {
 	text-align: center;
 	height: inherit;
 }
-
+section.project-description:hover {
+	background-color: rgb(3, 46, 5);
+}
 section.project-description p:first-child {
 	background-color: rgba(31, 122, 241, 0.5);
 	margin-left: 14%;
@@ -61,6 +70,10 @@ section.project-description p:first-child {
 	font-size: 16px;
 	font-weight: bold;
 	border: 2px rgb(0, 110, 255) solid;
+}
+section.project-description p:first-child:hover {
+	background-color: rgba(0, 0, 0, 0.623);
+	border: 2px rgba(0, 110, 255, 0.356) solid;
 }
 section.project-sources {
 	display: flex;

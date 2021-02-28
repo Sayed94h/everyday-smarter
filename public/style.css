@@ -175,12 +175,19 @@ section.score-box {
 }
 section.score-box p:first-child {
 	font-weight: bold;
-	font-size: 25px;
+	font-size: 29px;
 	color: rgb(97, 6, 77);
+	text-shadow: white 1px 4px 1px;
 }
 section.score-box p:last-child {
+	font-weight: bold;
 	font-size: 25px;
 	color: rgb(255, 255, 255);
+	text-shadow: rgb(97, 6, 77) 5px 2px 2px;
+	border-bottom: 1px gold solid;
+	border-top: 2px gold dotted;
+	padding-bottom: 3px;
+	padding-top: 3px;
 }
 section.game-console {
 	width: 70vw;
@@ -629,6 +636,9 @@ div.alert-container button {
 		padding: 5px;
 		text-align: center;
 	}
+	section.demo-container video {
+		width: 65vw;
+	}
 }
 
 /* 
@@ -927,5 +937,8 @@ div.alert-container button {
 		border: 2px rgba(0, 128, 0, 0.404) solid;
 		width: 80.5vw;
 		height: 100px;
+	}
+	section.demo-container video {
+		width: 65vw;
 	}
 }
