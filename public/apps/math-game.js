@@ -117,8 +117,7 @@ checkBtn.onclick = function () {
 	handler.clickHandler();
 };
 user_in.onkeyup = function (event) {
-	event.preventDefault();
-	if (event.keycode === 13) {
+	if (event.keyCode === 13) {
 		handler.clickHandler();
 	} else {
 		return;

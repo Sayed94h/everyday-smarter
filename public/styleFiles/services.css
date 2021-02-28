@@ -43,14 +43,25 @@ section.service-description {
 	border: 1px rgb(38, 0, 255) solid;
 	border-radius: 18px;
 	background-color: #fff;
-	box-shadow: rgba(128, 128, 128, 0.747) 2px 3px 3px 4px;
 }
-
+section.service-description:hover {
+	border: 1px rgb(5, 124, 5) solid;
+	background-color: rgb(18, 4, 70);
+	color: #fff;
+	box-shadow: rgba(3, 182, 113, 0.747) 6px 5px 1px;
+}
 section.service-pricing {
 	border: 2px solid rgb(43, 255, 0);
 	border-radius: 18px;
 	background-color: #fff;
 	box-shadow: rgba(63, 158, 39, 0.719) 2px 2px 1px 2px;
+}
+section.service-pricing:hover {
+	border: 1px solid rgb(255, 251, 0);
+	border-radius: 18px;
+	background-color: rgb(2, 39, 4);
+	color: white;
+	box-shadow: rgb(17, 25, 139) 5px 4px 1px 1px;
 }
 
 section.service-list p:last-child {
