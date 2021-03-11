@@ -6,7 +6,15 @@ const question_box = document.querySelector(".question-box");
 const game_level = document.getElementById("level");
 const user_in = document.getElementById("user-answer");
 const math_operator = document.getElementById("operator");
-
+// load the score from localStorage
+window.onload = function () {
+	if (localStorage.getItem("score") === null) {
+		localStorage.setItem("score", 0);
+		score.textContent = `${localStorage.getItem("score")}`;
+	} else {
+		score.textContent = `${localStorage.getItem("score")}`;
+	}
+};
 const handler = {
 	operators: ["+", "-", "*", "/"],
 	operatorToDisplay: "",
@@ -65,13 +73,17 @@ const handler = {
 		}
 	},
 	check_user_answer: function (userAnswer, inputEl) {
+		// check the correct answer, get the score from the localstorage and store the score in the localstorage
 		if (Number(userAnswer) == this.correctAnswer) {
-			this.realtime_score++;
+			let old_score = Number(localStorage.getItem("score"));
+			this.realtime_score = old_score;
+			let new_score = old_score + 1;
+			localStorage.setItem("score", new_score);
 			inputEl.style = "border:2px green solid;";
-			score.textContent = `${this.realtime_score}`;
+			score.textContent = `${new_score}`;
 		} else {
 			inputEl.style = "border:2px red solid;";
-			score.textContent = `${this.realtime_score}`;
+			score.textContent = `${localStorage.getItem("score")}`;
 		}
 	},
 	operandGenerator: function () {
