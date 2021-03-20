@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styleFiles/messages_page.css">
+    <title>Admin can check messages</title>
+</head>
+
+<body>
+    <section class="messages_page_wrapper">
+        <section>
+            <div id="error_box"></div>
+        </section>
+        <section class="login">
+            <div><label for="username">User Name</label></div>
+            <input type="text" placeholder="Enter Your Username" id="username">
+            <div><label for="password">Password</label></div>
+            <input type="password" placeholder="Enter Your Password" id="password"> <br> <br>
+            <input type="button" id="btn" value="Log In"> <br> <br>
+            <input type="button" id="refresh" value="Update">
+        </section>
+        <section id="messages"></section>
+        <section>
+            <input type="button" id="btn_logout" value="Log Out">
+        </section>
+    </section>
+    <script src="./apps/view_messages.js"></script>
+</body>
+
+</html>

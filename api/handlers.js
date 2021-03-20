@@ -14,11 +14,6 @@ const registrationsPath = path.join(
 	"..",
 	"/data/registrations.json"
 );
-const interactionsPath = path.join(
-	__dirname,
-	"..",
-	"/data/interactions-interestings.json"
-);
 const babyboyNamesPath = path.join(__dirname, "..", "/data/babyboysname.json");
 const babygirlNamesPath = path.join(
 	__dirname,
@@ -84,6 +79,24 @@ const handlers = {
 		});
 	},
 	getMessages: async (req, res, next) => {
+		const formData = req.body;
+		if (formData.userId === undefined || formData.userId === null) {
+			if (formData.username === "" || formData.password === "") {
+				res.json({
+					message: "Please Enter Your Credentials to log in!",
+				});
+				return;
+			}
+			if (
+				formData.username !== "sunnyDay" ||
+				formData.password !== "readyToRead+9"
+			) {
+				res.json({
+					message: "Your Credentials are not correct!",
+				});
+				return;
+			}
+		}
 		let readDatabase = await fs.readFile(messagesPath, "UTF-8", (err, data) => {
 			if (err) {
 				console.error("Error from reading database, contactForm: ", err);
@@ -96,7 +109,10 @@ const handlers = {
 			let parsedData = JSON.parse(data);
 			// data to send
 
-			res.json(parsedData.messages);
+			res.json({
+				emails: parsedData.messages,
+				userId: 578,
+			});
 		});
 	},
 	feedbackForm: async (req, res, next) => {
