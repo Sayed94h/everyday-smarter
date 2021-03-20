@@ -1,0 +1,63 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Verdana;
+}
+section.messages_page_wrapper {
+	margin: 25px 7px;
+}
+section#messages {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	justify-content: space-around;
+	align-content: center;
+	background: rgba(221, 208, 208, 0.473);
+	border-radius: 14px;
+	padding: 9px 14px;
+	margin: 9px 14px;
+}
+section#messages section {
+	background: rgba(202, 186, 186, 0.534);
+	border-radius: 14px;
+	padding: 5px 7px;
+	margin: 9px 1px;
+}
+
+section#messages section div.email {
+	border: 1px blue solid;
+	margin-top: 5px;
+	padding: 5px 7px;
+	border-radius: 5px;
+}
+section#messages section div.sub {
+	border: 1px green solid;
+	margin-top: 5px;
+	padding: 5px 7px;
+	border-radius: 5px;
+}
+section#messages section textarea.content {
+	border: 1px black solid;
+	margin-top: 5px;
+	padding: 5px 7px;
+	border-radius: 5px;
+	width: 270px;
+	height: 150px;
+	outline: none;
+}
+
+@media only screen and (max-width: 670px) {
+	section#messages {
+		display: grid;
+		grid-template-columns: auto;
+		justify-content: space-around;
+		align-content: center;
+	}
+}
+@media only screen and (max-width: 970px) and (min-width: 670px) {
+	section#messages {
+		display: grid;
+		grid-template-columns: auto auto;
+		justify-content: space-around;
+		align-content: center;
+	}
+}
