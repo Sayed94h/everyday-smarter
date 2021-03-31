@@ -8,8 +8,24 @@ const refresh = document.getElementById("refresh");
 const error_box = document.getElementById("error_box");
 const message_box = document.getElementById("messages");
 
+// display or non display the login, update and logout
+function dis_login_logout_update() {
+	const read_userID = localStorage.getItem("userID");
+	if (read_userID === "" || read_userID === null || read_userID === undefined) {
+		submit.style.display = "initial";
+		refresh.style.display = "none";
+		log_out.style.display = "none";
+	} else {
+		submit.style.display = "none";
+		refresh.style.display = "initial";
+		log_out.style.display = "initial";
+	}
+}
+
+dis_login_logout_update();
 function logOut() {
 	localStorage.clear();
+	dis_login_logout_update();
 }
 log_out.onclick = logOut;
 
@@ -65,6 +81,7 @@ const fetchGeneral = async () => {
 	}
 	username.value = "";
 	password.value = "";
+	dis_login_logout_update();
 };
 
 submit.onclick = fetchGeneral;

@@ -5,6 +5,62 @@ body {
 }
 section.messages_page_wrapper {
 	margin: 25px 7px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+header {
+	margin: 0;
+	padding: 8px 0;
+	text-align: center;
+	background-color: #345;
+	color: white;
+}
+section.error_message {
+	text-align: center;
+	padding: 4px 0;
+	color: red;
+	margin: 9px 0;
+}
+section.login {
+	border: 1px green solid;
+	border-radius: 9px;
+	width: 290px;
+	padding: 5px 4px;
+}
+input[type="text"],
+input[type="password"] {
+	width: 250px;
+	border: 1px solid blue;
+	outline: none;
+	border-radius: 9px;
+	height: 25px;
+	margin-bottom: 5px;
+}
+div.label label {
+	background-color: #345;
+	color: white;
+	font-weight: bold;
+	border-radius: 2px;
+	padding: 3px;
+}
+div.label {
+	margin: 5px 0;
+}
+input[type="button"],
+a {
+	background-color: green;
+	color: white;
+	padding: 5px;
+	font-weight: bold;
+	border-radius: 5px;
+	outline: none;
+	border: 1px lightgreen solid;
+	cursor: pointer;
+	width: 150px;
+	text-decoration: none;
 }
 section#messages {
 	display: grid;
@@ -14,13 +70,13 @@ section#messages {
 	background: rgba(221, 208, 208, 0.473);
 	border-radius: 14px;
 	padding: 9px 14px;
-	margin: 9px 14px;
+	margin: 9px 1px;
 }
 section#messages section {
 	background: rgba(202, 186, 186, 0.534);
 	border-radius: 14px;
-	padding: 5px 7px;
-	margin: 9px 1px;
+	padding: 6px 9px;
+	margin: 9px 2px;
 }
 
 section#messages section div.email {
