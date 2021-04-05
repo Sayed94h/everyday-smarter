@@ -9,17 +9,13 @@ const subscribedListPath = path.join(
 	"/data/subscribed-users.json"
 );
 const feedbackPath = path.join(__dirname, "..", "/data/feedback.json");
-const registrationsPath = path.join(
-	__dirname,
-	"..",
-	"/data/registrations.json"
-);
 const babyboyNamesPath = path.join(__dirname, "..", "/data/babyboysname.json");
 const babygirlNamesPath = path.join(
 	__dirname,
 	"..",
 	"/data/babygirlsname.json"
 );
+// Handlers for users requests
 const handlers = {
 	translateText: (req, res, next) => {
 		const text = req.body.text;
@@ -167,6 +163,22 @@ const handlers = {
 						"Thank you for your feedback. We appreciate your time. Have great times!",
 				});
 			});
+		});
+	},
+	getFeedbacks: async (req, res, next) => {
+		let readDatabase = await fs.readFile(feedbackPath, "UTF-8", (err, data) => {
+			if (err) {
+				console.error("Error from reading database, contactForm: ", err);
+				res.json({
+					message:
+						"Something went wrong. We will fix this problem. Please try again!",
+				});
+				return;
+			}
+			let parsedData = JSON.parse(data);
+			// data to send
+
+			res.json(parsedData.feedbacks);
 		});
 	},
 	subscribedList: async (req, res, next) => {

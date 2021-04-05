@@ -1,114 +1,58 @@
 # My Portfolio
 
-In this project I'm going to build my favorite website
+In this project I'm going to build my website portfolio
 
-...
+#### 0.Setup
 
----
-
-## User Story Dependencies
-
-[Story Dependency Diagram](https://excalidraw.com/)
-
----
-
-## WIREFRAME
-
-![wireframe]()
-
----
-
-## 0.Setup
-
-- Created the directory structures
+- Created the directory structures(Model, View, Controller)
 - Created the necessary files
 - Wrote the start backlog
 - Installed dependencies
 
 ---
 
-## 1. Home page
+#### 1. Home page
 
-**As a user I want to see the initial page when I load the site**
+As a user I want to see the initial page when I load the site
 
-### REPO
+#### 2. Footer
 
-### Task A: HTML
+#### 3. Navigation bar
 
-### Task B: CSS
+#### 4. Menu
 
-### Task C: JavaScript
+#### 5. Functionality for the header and menu in JavaScript
 
----
+#### 6. Page about
 
-## 2. Footer
+#### 7. Page Contacts
 
----
+#### 8. Page Feedback
 
-## 3. Navigation bar
+#### 9. Page Repository
 
----
+#### 10. Page Projects
 
-## 4. Menu
+#### 11. Page Services
 
----
+#### 12. Functionality for the subscribe bar
 
-## 5. Functionality for the header and menu in JavaScript
+#### 13. Responsive Design
 
----
+#### 14. Backend Design
 
-## 6. Page about
+#### 15. Backend routes and Handlers
 
----
-
-## 7. Page Contacts
+#### 16. Deployment
 
 ---
 
-## 8. Page Feedback
+#### Each major tasks of above has the following minor tasks except the backend which does not have HTML and CSS parts:
 
----
+A: HTML Part
 
-## 9. Page Repository
+B: CSS or Design part
 
----
-
-## 10. Page Projects
-
----
-
-## 11. Page registration
-
----
-
-## 12. Page Login
-
----
-
-## 13. Page Hobbies
-
----
-
-## 14. Page Interestings
-
----
-
-## 15. Page Services
-
----
-
-## 16. Functionality for the subscribtion bar
-
----
-
-## . Responsive Design
-
----
-
-## . Our trainings
-
----
-
-## . Out Passions, Visions and missions
+C: JavaScript or Functionality part
 
 ---

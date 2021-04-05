@@ -159,13 +159,7 @@ function decimalToBinary(event) {
 	let convertedDecimalToBinary = "";
 	while (userInputToNumber > 0) {
 		let checking = Math.floor(userInputToNumber % 2);
-		console.log(
-			"UserInNum: ",
-			userInputToNumber,
-			"type of UserInNum: ",
-			typeof userInputToNumber
-		);
-		console.log("checking: ", checking, "type of checking: ", typeof checking);
+
 		if (checking === 0) {
 			convertedDecimalToBinary = "0" + convertedDecimalToBinary;
 		} else {
