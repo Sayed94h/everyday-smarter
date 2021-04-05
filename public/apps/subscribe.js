@@ -4,7 +4,7 @@ const feedbackCont = document.getElementById("error-feedback");
 const userE = document.getElementById("userEmail");
 const subscribeButton = document.getElementById("subscribe");
 const EMFContainer = document.querySelector(".EMF-container");
-
+const currentYear = document.getElementById("current-year");
 const subscribeFunction = async () => {
 	const res = await fetch("/api/subscribedList", {
 		method: "POST",
@@ -39,3 +39,9 @@ userE.onkeyup = function (event) {
 		subscribeFunction();
 	}
 };
+
+function getCurrentYear() {
+	const newDate = new Date().toString().split(" ")[3];
+	currentYear.textContent = `${newDate}`;
+}
+getCurrentYear();

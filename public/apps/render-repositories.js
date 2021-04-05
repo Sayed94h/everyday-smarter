@@ -10,7 +10,7 @@ const renderRepositories = function () {
 	)
 		.then((responds) => responds.json())
 		.then((repoData) => {
-			console.log("data is: ", repoData);
+			// console.log("data is: ", repoData);
 			let tableEl = document.createElement("table");
 			let tableHead = document.createElement("thead");
 			let tableH1 = document.createElement("th");
