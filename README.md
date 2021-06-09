@@ -10,7 +10,7 @@ I am looking to find a job as a web developer(frontend, backend or full stack de
 
 1. [My Projects](https://everydaysmarter.herokuapp.com/projects.html)
 2. [ABOUT ME](https://everydaysmarter.herokuapp.com/about.html)
-3. [CANTACTS](https://everydaysmarter.herokuapp.com/contacts.html)
+3. [CONTACTS](https://everydaysmarter.herokuapp.com/contacts.html)
 
 Have a look at the [development strategy](./project-planning/development-strategy.md)
 
