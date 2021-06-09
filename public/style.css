@@ -1,944 +1,964 @@
 /* 
 	section showcase
 */
+
 .red-text {
-	color: red;
-	font-weight: bold;
+    color: red;
+    font-weight: bold;
 }
+
 section.showcase {
-	width: auto;
-	padding: 5vw;
-	background: radial-gradient(
-		circle at 60%,
-		white,
-		red,
-		orange,
-		yellow,
-		green,
-		rgb(0, 238, 255),
-		blue,
-		purple
-	);
+    width: auto;
+    padding: 5vw;
+    background: radial-gradient( circle at 60%, white, red, orange, yellow, green, rgb(0, 238, 255), blue, purple);
 }
 
 section.showcase section.container-showcase {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-content: center;
-	align-items: center;
-	padding: 5vw;
-	width: auto;
-	background-color: rgba(119, 2, 252, 0.247);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    padding: 5vw;
+    width: auto;
+    background-color: rgba(119, 2, 252, 0.247);
 }
+
 
 /* 2D transform */
+
 section.transform-2d {
-	width: 100px;
-	text-align: center;
-	padding: 2px;
-	color: white;
-	background-image: linear-gradient(
-		135deg,
-		rgba(103, 247, 7, 0.842),
-		rgba(225, 0, 255, 0.685),
-		rgba(247, 210, 4, 0.76)
-	);
-	transform: translate(19px, 0.5px);
-	transform: rotate(50deg);
-	box-shadow: rgba(21, 5, 238, 0.767) 4px 8px 7px 8px;
+    width: 100px;
+    text-align: center;
+    padding: 2px;
+    color: white;
+    background-image: linear-gradient( 135deg, rgba(103, 247, 7, 0.842), rgba(225, 0, 255, 0.685), rgba(247, 210, 4, 0.76));
+    transform: translate(19px, 0.5px);
+    transform: rotate(50deg);
+    box-shadow: rgba(21, 5, 238, 0.767) 4px 8px 7px 8px;
 }
 
+
 /* 3D transform */
+
 section.transform-3d {
-	width: 100px;
-	height: 100px;
-	margin-left: 120px;
-	transform-style: preserve-3d;
-	transition: transform 1.5s;
-	transform: rotate3d(1, 1, 1, 30deg);
+    width: 100px;
+    height: 100px;
+    margin-left: 120px;
+    transform-style: preserve-3d;
+    transition: transform 1.5s;
+    transform: rotate3d(1, 1, 1, 30deg);
 }
 
 div.threed {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	backface-visibility: inherit;
-	font-size: 25px;
-	color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: inherit;
+    font-size: 25px;
+    color: #fff;
 }
 
 section div.front {
-	background: rgba(36, 34, 34, 0.7);
-	transform: translateZ(50px);
+    background: rgba(36, 34, 34, 0.7);
+    transform: translateZ(50px);
 }
 
 section div.back {
-	background: rgba(7, 141, 7, 0.7);
-	transform: rotateY(180deg) translateZ(50px);
+    background: rgba(7, 141, 7, 0.7);
+    transform: rotateY(180deg) translateZ(50px);
 }
 
 section div.right {
-	background: rgba(190, 6, 6, 0.7);
-	transform: rotateY(90deg) translateZ(50px);
+    background: rgba(190, 6, 6, 0.7);
+    transform: rotateY(90deg) translateZ(50px);
 }
 
 section div.left {
-	background: rgba(6, 6, 116, 0.7);
-	transform: rotateY(-90deg) translateZ(50px);
+    background: rgba(6, 6, 116, 0.7);
+    transform: rotateY(-90deg) translateZ(50px);
 }
 
 section div.top {
-	background: rgba(231, 198, 7, 0.7);
-	transform: rotateX(90deg) translateZ(50px);
+    background: rgba(231, 198, 7, 0.7);
+    transform: rotateX(90deg) translateZ(50px);
 }
 
 section div.bottom {
-	background: rgba(59, 3, 59, 0.7);
-	transform: rotateX(-90deg) translateZ(50px);
+    background: rgba(59, 3, 59, 0.7);
+    transform: rotateX(-90deg) translateZ(50px);
 }
+
+
 /* for the second animation */
+
 section.transform-3d2 {
-	width: 100px;
-	height: 100px;
-	margin-left: 120px;
-	transform-style: preserve-3d;
-	transition: transform 1.5s;
-	transform: rotate3d(0, 1, 0, 15deg);
+    width: 100px;
+    height: 100px;
+    margin-left: 120px;
+    transform-style: preserve-3d;
+    transition: transform 1.5s;
+    transform: rotate3d(0, 1, 0, 15deg);
 }
+
 div.threed2 {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	height: 100%;
-	font-size: 16px;
-	position: absolute;
-	backface-visibility: inherit;
-	color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    position: absolute;
+    backface-visibility: inherit;
+    color: #fff;
 }
 
 section div.one {
-	background: rgba(90, 90, 90, 0.7);
-	transform: translateZ(50px);
+    background: rgba(90, 90, 90, 0.7);
+    transform: translateZ(50px);
 }
 
 section div.two {
-	background: rgba(0, 210, 0, 0.7);
-	transform: rotateX(-90deg) translateZ(50px);
+    background: rgba(0, 210, 0, 0.7);
+    transform: rotateX(-90deg) translateZ(50px);
 }
 
 section div.three {
-	background: rgba(210, 0, 0, 0.7);
-	transform: rotateX(-180deg) translateZ(50px);
+    background: rgba(210, 0, 0, 0.7);
+    transform: rotateX(-180deg) translateZ(50px);
 }
 
 section div.four {
-	background: rgba(0, 0, 210, 0.7);
-	transform: rotateX(-270deg) translateZ(50px);
+    background: rgba(0, 0, 210, 0.7);
+    transform: rotateX(-270deg) translateZ(50px);
 }
 
 section div.five {
-	background: rgba(210, 210, 0, 0.7);
-	transform: rotateY(270deg) translateZ(50px);
+    background: rgba(210, 210, 0, 0.7);
+    transform: rotateY(270deg) translateZ(50px);
 }
 
 section div.six {
-	background: rgba(210, 0, 210, 0.7);
-	transform: rotateY(90deg) translateZ(50px);
+    background: rgba(210, 0, 210, 0.7);
+    transform: rotateY(90deg) translateZ(50px);
 }
 
+
 /* End of section showcase (transition , animation, transform) */
+
 
 /* Math Game */
 
 section.game-wrapper {
-	width: 97vw;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	margin-top: 15px;
-}
-section.game-container {
-	width: 96vw;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-}
-section.score-box {
-	width: 20vw;
-	background-color: rgb(226, 64, 172);
-	text-align: center;
-}
-section.score-box p:first-child {
-	font-weight: bold;
-	font-size: 29px;
-	color: rgb(97, 6, 77);
-	text-shadow: white 1px 4px 1px;
-}
-section.score-box p:last-child {
-	font-weight: bold;
-	font-size: 25px;
-	color: rgb(255, 255, 255);
-	text-shadow: rgb(97, 6, 77) 5px 2px 2px;
-	border-bottom: 1px gold solid;
-	border-top: 2px gold dotted;
-	padding-bottom: 3px;
-	padding-top: 3px;
-}
-section.game-console {
-	width: 70vw;
-}
-section.game-header p:last-child {
-	border-bottom: 1px solid gray;
-	padding-bottom: 8px;
-}
-section.game-header p:first-child {
-	font-size: 25px;
-	font-weight: bold;
-}
-form.math-form {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	margin-bottom: 5px;
-}
-form.math-form div.container {
-	background-color: #22d;
-	padding: 5px 7px;
-	margin-right: 5px;
-	color: #fff;
-	border-radius: 5px;
-}
-form.math-form div.container div {
-	padding: 3px 0;
-}
-form.math-form select {
-	width: 13vw;
-	padding: 3px 4px;
-	border-radius: 5px;
-	outline: none;
-	margin-right: 5px;
-	border: 1px green solid;
-}
-section.math-box {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	align-items: center;
-	margin: 5px 0;
-}
-section.question-answer {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	align-items: center;
-}
-section.question-answer section.question-box section {
-	width: 14vw;
-	border: 1px gray solid;
-	border-radius: 5px;
-	padding: 5px 8px;
-	text-align: center;
-}
-section.question-answer section.answer-box input {
-	width: 15vw;
-	padding: 6px 8px;
-	border-radius: 5px;
-	margin: 5px 15px;
-	outline: none;
-	border: 1px green solid;
-}
-section.check-answer button {
-	width: 9vw;
-	padding: 6px 8px;
-	cursor: pointer;
-	background-color: rgba(17, 17, 17, 0.13);
-	color: black;
-	text-align: center;
-	border-radius: 5px;
-	border: 1px rgba(0, 128, 0, 0.301) solid;
-	outline: none;
-	font-weight: bold;
+    width: 97vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 15px;
 }
 
+section.game-container {
+    width: 96vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+section.score-box {
+    width: 20vw;
+    background-color: rgb(226, 64, 172);
+    text-align: center;
+}
+
+section.score-box p:first-child {
+    font-weight: bold;
+    font-size: 29px;
+    color: rgb(97, 6, 77);
+    text-shadow: white 1px 4px 1px;
+}
+
+section.score-box p:last-child {
+    font-weight: bold;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(97, 6, 77) 5px 2px 2px;
+    border-bottom: 1px gold solid;
+    border-top: 2px gold dotted;
+    padding-bottom: 3px;
+    padding-top: 3px;
+}
+
+section.game-console {
+    width: 70vw;
+}
+
+section.game-header p:last-child {
+    border-bottom: 1px solid gray;
+    padding-bottom: 8px;
+}
+
+section.game-header p:first-child {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+form.math-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+}
+
+form.math-form div.container {
+    background-color: #22d;
+    padding: 5px 7px;
+    margin-right: 5px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+form.math-form div.container div {
+    padding: 3px 0;
+}
+
+form.math-form select {
+    width: 13vw;
+    padding: 3px 4px;
+    border-radius: 5px;
+    outline: none;
+    margin-right: 5px;
+    border: 1px green solid;
+}
+
+section.math-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5px 0;
+}
+
+section.question-answer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+section.question-answer section.question-box section {
+    width: 14vw;
+    border: 1px gray solid;
+    border-radius: 5px;
+    padding: 5px 8px;
+    text-align: center;
+}
+
+section.question-answer section.answer-box input {
+    width: 15vw;
+    padding: 6px 8px;
+    border-radius: 5px;
+    margin: 5px 15px;
+    outline: none;
+    border: 1px green solid;
+}
+
+section.check-answer button {
+    width: 9vw;
+    padding: 6px 8px;
+    cursor: pointer;
+    background-color: rgba(17, 17, 17, 0.13);
+    color: black;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px rgba(0, 128, 0, 0.301) solid;
+    outline: none;
+    font-weight: bold;
+}
+
+
 /* End of Math Game */
+
+
+/* mean median mode */
+
+section.mean-median-mode {
+    width: 85vw;
+    margin: 2vw 8vw;
+}
+
+section.mean-median-mode section select,
+section.mean-median-mode section button {
+    width: 103px;
+    padding: 5px 8px;
+    border: 1px blue solid;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+section.mean-median-mode section div {
+    margin: 0 0 8px 0;
+}
+
+section.mean-median-mode section div label {
+    background-color: #22d;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+section.mean-median-mode section input {
+    width: 380px;
+    padding: 5px 8px;
+    border: 1px blue solid;
+    outline: none;
+    border-radius: 4px;
+}
+
+section.three-ms-result p {
+    border-top: 1px solid gold;
+    padding-top: 7px;
+}
+
+section.three-ms-result div {
+    border-bottom: 1px solid gold;
+    padding: 2px 0 7px 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 29px;
+    color: #808;
+}
+
 
 /* emoji converter */
 
 section.emoji-wrapper,
 section.keycode-wrapper,
 section.binary-wrapper {
-	width: 85vw;
-	margin: 2vw 4vw;
-	text-align: center;
+    width: 85vw;
+    margin: 2vw 4vw;
+    text-align: center;
 }
+
 section.emoji-wrapper h4,
 section.keycode-wrapper h4,
 section.binary-wrapper h4 {
-	margin: 2vw 8vw;
-	padding-bottom: 9px;
-	border-bottom: 2px gold solid;
+    margin: 2vw 8vw;
+    padding-bottom: 9px;
+    border-bottom: 2px gold solid;
 }
+
 section.emoji-container,
 section.keycode-container,
 section.binary-container {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 section.emoji-container section div.label,
 section.keycode-container section div.label,
 section.binary-container section div.label {
-	background-color: blue;
-	color: white;
-	margin-bottom: 5px;
-	padding: 4px 3px;
+    background-color: blue;
+    color: white;
+    margin-bottom: 5px;
+    padding: 4px 3px;
 }
 
 section.emoji-container section textarea,
 section.keycode-container section textarea,
 section.binary-container section textarea {
-	padding: 4px;
-	outline: none;
-	border: 2px rgba(0, 128, 0, 0.404) solid;
-	width: 30vw;
-	height: 100px;
+    padding: 4px;
+    outline: none;
+    border: 2px rgba(0, 128, 0, 0.404) solid;
+    width: 30vw;
+    height: 100px;
 }
+
+
 /* 
 		style for demo
 */
 
 section.demo-wrapper {
-	width: 85vw;
-	margin: 2vw 4vw;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: center;
-	align-content: center;
+    width: 85vw;
+    margin: 2vw 4vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
 }
+
 section.demo-container {
-	border: 2px rgb(143, 68, 228) solid;
+    border: 2px rgb(143, 68, 228) solid;
 }
+
 section.demo-container video {
-	width: 35vw;
+    width: 35vw;
 }
 
 div.alert-wrapper {
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
 }
+
 div.alert-container {
-	width: 40vw;
-	margin: 15vw 28vw;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background: #fff;
-	border-radius: 9px;
-	padding: 6px;
-	text-align: center;
+    width: 40vw;
+    margin: 15vw 28vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border-radius: 9px;
+    padding: 6px;
+    text-align: center;
 }
+
 div.alert-container button {
-	padding: 6px 20px;
-	background: #22d;
-	color: #fff;
-	outline: #99f;
-	font-size: 19px;
-	border-radius: 5px;
-	margin-bottom: 15px;
+    padding: 6px 20px;
+    background: #22d;
+    color: #fff;
+    outline: #99f;
+    font-size: 19px;
+    border-radius: 5px;
+    margin-bottom: 15px;
 }
+
+
 /* 
 		max width 390px
 */
+
 @media (max-width: 390px) {
-	/* 
+    /* 
 		section showcase
 	*/
-
-	section.showcase {
-		width: 94vw;
-		padding: 3vw;
-		background: radial-gradient(
-			circle at 60%,
-			white,
-			red,
-			orange,
-			yellow,
-			green,
-			rgb(0, 238, 255),
-			blue,
-			purple
-		);
-	}
-
-	section.showcase section.container-showcase {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
-		width: 87vw;
-		background-color: rgba(119, 2, 252, 0.178);
-	}
-
-	/* 2D transform */
-	section.transform-2d {
-		display: none;
-	}
-
-	/* 3D transform */
-	section.transform-3d {
-		width: 80px;
-		height: 80px;
-		transform-style: preserve-3d;
-		transition: transform 1.5s;
-		transform: rotate3d(1, 1, 1, 30deg);
-	}
-
-	div.threed {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		backface-visibility: inherit;
-		font-size: 15px;
-		color: #fff;
-	}
-
-	section div.front {
-		background: rgba(36, 34, 34, 0.7);
-		transform: translateZ(40px);
-	}
-
-	section div.back {
-		background: rgba(7, 141, 7, 0.7);
-		transform: rotateY(180deg) translateZ(40px);
-	}
-
-	section div.right {
-		background: rgba(190, 6, 6, 0.7);
-		transform: rotateY(90deg) translateZ(40px);
-	}
-
-	section div.left {
-		background: rgba(6, 6, 116, 0.7);
-		transform: rotateY(-90deg) translateZ(40px);
-	}
-
-	section div.top {
-		background: rgba(231, 198, 7, 0.7);
-		transform: rotateX(90deg) translateZ(40px);
-	}
-
-	section div.bottom {
-		background: rgba(59, 3, 59, 0.7);
-		transform: rotateX(-90deg) translateZ(40px);
-	}
-	/* for the second animation */
-	section.transform-3d2 {
-		width: 70px;
-		height: 70px;
-		transform-style: preserve-3d;
-		transition: transform 1.5s;
-		transform: rotate3d(0, 1, 0, 15deg);
-	}
-	div.threed2 {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-		height: 100%;
-		font-size: 12px;
-		position: absolute;
-		backface-visibility: inherit;
-		color: #fff;
-	}
-
-	section div.one {
-		background: rgba(90, 90, 90, 0.7);
-		transform: translateZ(35px);
-	}
-
-	section div.two {
-		background: rgba(0, 210, 0, 0.7);
-		transform: rotateX(-90deg) translateZ(35px);
-	}
-
-	section div.three {
-		background: rgba(210, 0, 0, 0.7);
-		transform: rotateX(-180deg) translateZ(35px);
-	}
-
-	section div.four {
-		background: rgba(0, 0, 210, 0.7);
-		transform: rotateX(-270deg) translateZ(35px);
-	}
-
-	section div.five {
-		background: rgba(210, 210, 0, 0.7);
-		transform: rotateY(270deg) translateZ(35px);
-	}
-
-	section div.six {
-		background: rgba(210, 0, 210, 0.7);
-		transform: rotateY(90deg) translateZ(35px);
-	}
-
-	/* end of section showcase (transition , animation, transform) */
-	/* Math Game */
-
-	section.game-wrapper {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
-		margin-top: 15px;
-	}
-	section.game-container {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
-	}
-	section.score-box {
-		width: 100%;
-		background-color: rgb(255, 58, 229);
-		text-align: center;
-	}
-	section.score-box p:first-child {
-		font-weight: bold;
-		font-size: 25px;
-		color: rgb(97, 6, 77);
-	}
-	section.score-box p:last-child {
-		font-size: 25px;
-		color: rgb(255, 255, 255);
-	}
-	section.game-console {
-		width: 100%;
-	}
-	section.game-header p {
-		border-bottom: 1px solid gray;
-		padding: 6px;
-	}
-	form.math-form {
-		display: flex;
-		flex-direction: row;
-		justify-content: flex-start;
-		margin-bottom: 5px;
-	}
-	form.math-form select {
-		width: 28vw;
-		padding: 3px 4px;
-		border-radius: 5px;
-		outline: none;
-		border: 1px green solid;
-	}
-	section.math-box {
-		display: flex;
-		flex-direction: row;
-		justify-content: flex-start;
-		align-items: center;
-		margin: 5px 0;
-	}
-	section.question-answer {
-		display: flex;
-		flex-direction: row;
-		justify-content: flex-start;
-		align-items: center;
-	}
-	section.question-answer section.question-box section {
-		width: 30vw;
-		border: 1px gray solid;
-		border-radius: 5px;
-		padding: 5px 8px;
-		text-align: center;
-	}
-	section.question-answer section.answer-box input {
-		width: 25vw;
-		padding: 6px 8px;
-		border-radius: 5px;
-		margin: 5px 15px;
-		outline: none;
-		border: 1px green solid;
-	}
-	section.check-answer button {
-		width: 20vw;
-		padding: 6px 8px;
-		cursor: pointer;
-		background-color: rgba(17, 17, 17, 0.13);
-		color: black;
-		text-align: center;
-		border-radius: 5px;
-		border: 1px rgba(0, 128, 0, 0.301) solid;
-		outline: none;
-		font-weight: bold;
-	}
-
-	/* End of Math Game */
-	/* emoji converter */
-
-	section.emoji-wrapper,
-	section.keycode-wrapper,
-	section.binary-wrapper {
-		width: 85vw;
-		margin: 2vw 4vw;
-		text-align: center;
-	}
-
-	section.emoji-container,
-	section.keycode-container,
-	section.binary-container {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
-		align-content: center;
-		align-items: center;
-	}
-
-	section.emoji-container section div.label,
-	section.keycode-container section div.label,
-	section.binary-container section div.label {
-		background-color: blue;
-		color: white;
-		margin-bottom: 5px;
-		padding: 4px 1px;
-		width: 82.9vw;
-	}
-
-	section.emoji-container section textarea,
-	section.keycode-container section textarea,
-	section.binary-container section textarea {
-		padding: 4px 3px;
-		outline: none;
-		border: 2px rgba(0, 128, 0, 0.404) solid;
-		width: 80.5vw;
-		height: 100px;
-	}
-	div.alert-container {
-		width: 70vw;
-		margin: 15vw 13vw;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		background: #fff;
-		border-radius: 9px;
-		padding: 5px;
-		text-align: center;
-	}
-	section.demo-container video {
-		width: 65vw;
-	}
+    section.showcase {
+        width: 94vw;
+        padding: 3vw;
+        background: radial-gradient( circle at 60%, white, red, orange, yellow, green, rgb(0, 238, 255), blue, purple);
+    }
+    section.showcase section.container-showcase {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 87vw;
+        background-color: rgba(119, 2, 252, 0.178);
+    }
+    /* 2D transform */
+    section.transform-2d {
+        display: none;
+    }
+    /* 3D transform */
+    section.transform-3d {
+        width: 80px;
+        height: 80px;
+        transform-style: preserve-3d;
+        transition: transform 1.5s;
+        transform: rotate3d(1, 1, 1, 30deg);
+    }
+    div.threed {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        backface-visibility: inherit;
+        font-size: 15px;
+        color: #fff;
+    }
+    section div.front {
+        background: rgba(36, 34, 34, 0.7);
+        transform: translateZ(40px);
+    }
+    section div.back {
+        background: rgba(7, 141, 7, 0.7);
+        transform: rotateY(180deg) translateZ(40px);
+    }
+    section div.right {
+        background: rgba(190, 6, 6, 0.7);
+        transform: rotateY(90deg) translateZ(40px);
+    }
+    section div.left {
+        background: rgba(6, 6, 116, 0.7);
+        transform: rotateY(-90deg) translateZ(40px);
+    }
+    section div.top {
+        background: rgba(231, 198, 7, 0.7);
+        transform: rotateX(90deg) translateZ(40px);
+    }
+    section div.bottom {
+        background: rgba(59, 3, 59, 0.7);
+        transform: rotateX(-90deg) translateZ(40px);
+    }
+    /* for the second animation */
+    section.transform-3d2 {
+        width: 70px;
+        height: 70px;
+        transform-style: preserve-3d;
+        transition: transform 1.5s;
+        transform: rotate3d(0, 1, 0, 15deg);
+    }
+    div.threed2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        font-size: 12px;
+        position: absolute;
+        backface-visibility: inherit;
+        color: #fff;
+    }
+    section div.one {
+        background: rgba(90, 90, 90, 0.7);
+        transform: translateZ(35px);
+    }
+    section div.two {
+        background: rgba(0, 210, 0, 0.7);
+        transform: rotateX(-90deg) translateZ(35px);
+    }
+    section div.three {
+        background: rgba(210, 0, 0, 0.7);
+        transform: rotateX(-180deg) translateZ(35px);
+    }
+    section div.four {
+        background: rgba(0, 0, 210, 0.7);
+        transform: rotateX(-270deg) translateZ(35px);
+    }
+    section div.five {
+        background: rgba(210, 210, 0, 0.7);
+        transform: rotateY(270deg) translateZ(35px);
+    }
+    section div.six {
+        background: rgba(210, 0, 210, 0.7);
+        transform: rotateY(90deg) translateZ(35px);
+    }
+    /* end of section showcase (transition , animation, transform) */
+    /* Math Game */
+    section.game-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 15px;
+    }
+    section.game-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    section.score-box {
+        width: 100%;
+        background-color: rgb(255, 58, 229);
+        text-align: center;
+    }
+    section.score-box p:first-child {
+        font-weight: bold;
+        font-size: 25px;
+        color: rgb(97, 6, 77);
+    }
+    section.score-box p:last-child {
+        font-size: 25px;
+        color: rgb(255, 255, 255);
+    }
+    section.game-console {
+        width: 100%;
+    }
+    section.game-header p {
+        border-bottom: 1px solid gray;
+        padding: 6px;
+    }
+    form.math-form {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-bottom: 5px;
+    }
+    form.math-form select {
+        width: 28vw;
+        padding: 3px 4px;
+        border-radius: 5px;
+        outline: none;
+        border: 1px green solid;
+    }
+    section.math-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 5px 0;
+    }
+    section.question-answer {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    section.question-answer section.question-box section {
+        width: 30vw;
+        border: 1px gray solid;
+        border-radius: 5px;
+        padding: 5px 8px;
+        text-align: center;
+    }
+    section.question-answer section.answer-box input {
+        width: 25vw;
+        padding: 6px 8px;
+        border-radius: 5px;
+        margin: 5px 15px;
+        outline: none;
+        border: 1px green solid;
+    }
+    section.check-answer button {
+        width: 20vw;
+        padding: 6px 8px;
+        cursor: pointer;
+        background-color: rgba(17, 17, 17, 0.13);
+        color: black;
+        text-align: center;
+        border-radius: 5px;
+        border: 1px rgba(0, 128, 0, 0.301) solid;
+        outline: none;
+        font-weight: bold;
+    }
+    /* End of Math Game */
+    section.mean-median-mode section input {
+        width: 200px;
+        padding: 5px 8px;
+        border: 1px blue solid;
+        outline: none;
+        border-radius: 4px;
+    }
+    /* emoji converter */
+    section.emoji-wrapper,
+    section.keycode-wrapper,
+    section.binary-wrapper {
+        width: 85vw;
+        margin: 2vw 4vw;
+        text-align: center;
+    }
+    section.emoji-container,
+    section.keycode-container,
+    section.binary-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: center;
+        align-items: center;
+    }
+    section.emoji-container section div.label,
+    section.keycode-container section div.label,
+    section.binary-container section div.label {
+        background-color: blue;
+        color: white;
+        margin-bottom: 5px;
+        padding: 4px 1px;
+        width: 82.9vw;
+    }
+    section.emoji-container section textarea,
+    section.keycode-container section textarea,
+    section.binary-container section textarea {
+        padding: 4px 3px;
+        outline: none;
+        border: 2px rgba(0, 128, 0, 0.404) solid;
+        width: 80.5vw;
+        height: 100px;
+    }
+    div.alert-container {
+        width: 70vw;
+        margin: 15vw 13vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #fff;
+        border-radius: 9px;
+        padding: 5px;
+        text-align: center;
+    }
+    section.demo-container video {
+        width: 65vw;
+    }
 }
+
 
 /* 
 		max width 670px
 */
 
 @media (max-width: 670px) and (min-width: 390px) {
-	div.alert-container {
-		width: 60vw;
-		margin: 15vw 18vw;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		background: #fff;
-		border-radius: 9px;
-		padding: 6px;
-		text-align: center;
-	}
-	/* 
+    div.alert-container {
+        width: 60vw;
+        margin: 15vw 18vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #fff;
+        border-radius: 9px;
+        padding: 6px;
+        text-align: center;
+    }
+    /* 
 		section showcase
 	*/
-
-	section.showcase {
-		width: 94vw;
-		padding: 3vw;
-		background: radial-gradient(
-			circle at 60%,
-			white,
-			red,
-			orange,
-			yellow,
-			green,
-			rgb(0, 238, 255),
-			blue,
-			purple
-		);
-	}
-
-	section.showcase section.container-showcase {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
-		align-content: center;
-		align-items: center;
-		padding: 3vw;
-		width: 90vw;
-		background-color: rgba(119, 2, 252, 0.178);
-	}
-
-	/* 2D transform */
-	section.transform-2d {
-		width: 70px;
-		text-align: center;
-		padding: 2px;
-		color: white;
-		background-image: linear-gradient(
-			135deg,
-			rgba(103, 247, 7, 0.842),
-			rgba(225, 0, 255, 0.685),
-			rgba(247, 210, 4, 0.76)
-		);
-		transform: translate(19px, 0.5px);
-		transform: rotate(50deg);
-		box-shadow: rgba(21, 5, 238, 0.767) 4px 7px 6px 7px;
-	}
-	section.transform-2d h1 {
-		font-size: 11px;
-	}
-	/* 3D transform */
-	section.transform-3d {
-		width: 80px;
-		height: 80px;
-		transform-style: preserve-3d;
-		transition: transform 1.5s;
-		transform: rotate3d(1, 1, 1, 30deg);
-	}
-
-	div.threed {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		backface-visibility: inherit;
-		font-size: 15px;
-		color: #fff;
-	}
-
-	section div.front {
-		background: rgba(36, 34, 34, 0.7);
-		transform: translateZ(40px);
-	}
-
-	section div.back {
-		background: rgba(7, 141, 7, 0.7);
-		transform: rotateY(180deg) translateZ(40px);
-	}
-
-	section div.right {
-		background: rgba(190, 6, 6, 0.7);
-		transform: rotateY(90deg) translateZ(40px);
-	}
-
-	section div.left {
-		background: rgba(6, 6, 116, 0.7);
-		transform: rotateY(-90deg) translateZ(40px);
-	}
-
-	section div.top {
-		background: rgba(231, 198, 7, 0.7);
-		transform: rotateX(90deg) translateZ(40px);
-	}
-
-	section div.bottom {
-		background: rgba(59, 3, 59, 0.7);
-		transform: rotateX(-90deg) translateZ(40px);
-	}
-	/* for the second animation */
-	section.transform-3d2 {
-		width: 70px;
-		height: 70px;
-		transform-style: preserve-3d;
-		transition: transform 1.5s;
-		transform: rotate3d(0, 1, 0, 15deg);
-	}
-	div.threed2 {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-		height: 100%;
-		font-size: 12px;
-		position: absolute;
-		backface-visibility: inherit;
-		color: #fff;
-	}
-
-	section div.one {
-		background: rgba(90, 90, 90, 0.7);
-		transform: translateZ(35px);
-	}
-
-	section div.two {
-		background: rgba(0, 210, 0, 0.7);
-		transform: rotateX(-90deg) translateZ(35px);
-	}
-
-	section div.three {
-		background: rgba(210, 0, 0, 0.7);
-		transform: rotateX(-180deg) translateZ(35px);
-	}
-
-	section div.four {
-		background: rgba(0, 0, 210, 0.7);
-		transform: rotateX(-270deg) translateZ(35px);
-	}
-
-	section div.five {
-		background: rgba(210, 210, 0, 0.7);
-		transform: rotateY(270deg) translateZ(35px);
-	}
-
-	section div.six {
-		background: rgba(210, 0, 210, 0.7);
-		transform: rotateY(90deg) translateZ(35px);
-	}
-
-	/* end of section showcase (transition , animation, transform) */
-	/* Math Game */
-
-	section.game-wrapper {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
-		margin-top: 15px;
-	}
-	section.game-container {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
-	}
-	section.score-box {
-		width: 100%;
-		background-color: purple;
-		text-align: center;
-	}
-	section.score-box p:first-child {
-		font-weight: bold;
-		font-size: 25px;
-		color: rgb(245, 156, 225);
-	}
-	section.score-box p:last-child {
-		font-size: 25px;
-		color: rgb(255, 255, 255);
-	}
-	section.game-console {
-		width: 100%;
-	}
-	section.game-header p {
-		border-bottom: 1px solid gray;
-		padding: 6px;
-	}
-	form.math-form {
-		display: flex;
-		flex-direction: row;
-		justify-content: flex-start;
-		margin-bottom: 5px;
-	}
-	form.math-form select {
-		width: 24vw;
-		padding: 3px 4px;
-		border-radius: 5px;
-		outline: none;
-		border: 1px green solid;
-	}
-	section.math-box {
-		display: flex;
-		flex-direction: row;
-		justify-content: flex-start;
-		align-items: center;
-		margin: 5px 0;
-	}
-	section.question-answer {
-		display: flex;
-		flex-direction: row;
-		justify-content: flex-start;
-		align-items: center;
-	}
-	section.question-answer section.question-box section {
-		width: 30vw;
-		border: 1px gray solid;
-		border-radius: 5px;
-		padding: 5px 8px;
-		text-align: center;
-	}
-	section.question-answer section.answer-box input {
-		width: 25vw;
-		padding: 6px 8px;
-		border-radius: 5px;
-		margin: 5px 15px;
-		outline: none;
-		border: 1px green solid;
-	}
-	section.check-answer button {
-		width: 20vw;
-		padding: 6px 8px;
-		cursor: pointer;
-		background-color: rgba(17, 17, 17, 0.13);
-		color: black;
-		text-align: center;
-		border-radius: 5px;
-		border: 1px rgba(0, 128, 0, 0.301) solid;
-		outline: none;
-		font-weight: bold;
-	}
-
-	/* End of Math Game */
-	/* emoji converter */
-
-	section.emoji-wrapper,
-	section.keycode-wrapper,
-	section.binary-wrapper {
-		width: 85vw;
-		margin: 2vw 4vw;
-		text-align: center;
-	}
-
-	section.emoji-container,
-	section.keycode-container,
-	section.binary-container {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
-		align-content: center;
-		align-items: center;
-	}
-
-	section.emoji-container section div.label,
-	section.keycode-container section div.label,
-	section.binary-container section div.label {
-		background-color: blue;
-		color: white;
-		margin-bottom: 5px;
-		padding: 4px 1px;
-		width: 82.9vw;
-	}
-
-	section.emoji-container section textarea,
-	section.keycode-container section textarea,
-	section.binary-container section textarea {
-		padding: 4px 3px;
-		outline: none;
-		border: 2px rgba(0, 128, 0, 0.404) solid;
-		width: 80.5vw;
-		height: 100px;
-	}
-	section.demo-container video {
-		width: 65vw;
-	}
+    section.showcase {
+        width: 94vw;
+        padding: 3vw;
+        background: radial-gradient( circle at 60%, white, red, orange, yellow, green, rgb(0, 238, 255), blue, purple);
+    }
+    section.showcase section.container-showcase {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: center;
+        align-items: center;
+        padding: 3vw;
+        width: 90vw;
+        background-color: rgba(119, 2, 252, 0.178);
+    }
+    /* 2D transform */
+    section.transform-2d {
+        width: 70px;
+        text-align: center;
+        padding: 2px;
+        color: white;
+        background-image: linear-gradient( 135deg, rgba(103, 247, 7, 0.842), rgba(225, 0, 255, 0.685), rgba(247, 210, 4, 0.76));
+        transform: translate(19px, 0.5px);
+        transform: rotate(50deg);
+        box-shadow: rgba(21, 5, 238, 0.767) 4px 7px 6px 7px;
+    }
+    section.transform-2d h1 {
+        font-size: 11px;
+    }
+    /* 3D transform */
+    section.transform-3d {
+        width: 80px;
+        height: 80px;
+        transform-style: preserve-3d;
+        transition: transform 1.5s;
+        transform: rotate3d(1, 1, 1, 30deg);
+    }
+    div.threed {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        backface-visibility: inherit;
+        font-size: 15px;
+        color: #fff;
+    }
+    section div.front {
+        background: rgba(36, 34, 34, 0.7);
+        transform: translateZ(40px);
+    }
+    section div.back {
+        background: rgba(7, 141, 7, 0.7);
+        transform: rotateY(180deg) translateZ(40px);
+    }
+    section div.right {
+        background: rgba(190, 6, 6, 0.7);
+        transform: rotateY(90deg) translateZ(40px);
+    }
+    section div.left {
+        background: rgba(6, 6, 116, 0.7);
+        transform: rotateY(-90deg) translateZ(40px);
+    }
+    section div.top {
+        background: rgba(231, 198, 7, 0.7);
+        transform: rotateX(90deg) translateZ(40px);
+    }
+    section div.bottom {
+        background: rgba(59, 3, 59, 0.7);
+        transform: rotateX(-90deg) translateZ(40px);
+    }
+    /* for the second animation */
+    section.transform-3d2 {
+        width: 70px;
+        height: 70px;
+        transform-style: preserve-3d;
+        transition: transform 1.5s;
+        transform: rotate3d(0, 1, 0, 15deg);
+    }
+    div.threed2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        font-size: 12px;
+        position: absolute;
+        backface-visibility: inherit;
+        color: #fff;
+    }
+    section div.one {
+        background: rgba(90, 90, 90, 0.7);
+        transform: translateZ(35px);
+    }
+    section div.two {
+        background: rgba(0, 210, 0, 0.7);
+        transform: rotateX(-90deg) translateZ(35px);
+    }
+    section div.three {
+        background: rgba(210, 0, 0, 0.7);
+        transform: rotateX(-180deg) translateZ(35px);
+    }
+    section div.four {
+        background: rgba(0, 0, 210, 0.7);
+        transform: rotateX(-270deg) translateZ(35px);
+    }
+    section div.five {
+        background: rgba(210, 210, 0, 0.7);
+        transform: rotateY(270deg) translateZ(35px);
+    }
+    section div.six {
+        background: rgba(210, 0, 210, 0.7);
+        transform: rotateY(90deg) translateZ(35px);
+    }
+    /* end of section showcase (transition , animation, transform) */
+    /* Math Game */
+    section.game-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 15px;
+    }
+    section.game-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    section.score-box {
+        width: 100%;
+        background-color: purple;
+        text-align: center;
+    }
+    section.score-box p:first-child {
+        font-weight: bold;
+        font-size: 25px;
+        color: rgb(245, 156, 225);
+    }
+    section.score-box p:last-child {
+        font-size: 25px;
+        color: rgb(255, 255, 255);
+    }
+    section.game-console {
+        width: 100%;
+    }
+    section.game-header p {
+        border-bottom: 1px solid gray;
+        padding: 6px;
+    }
+    form.math-form {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-bottom: 5px;
+    }
+    form.math-form select {
+        width: 24vw;
+        padding: 3px 4px;
+        border-radius: 5px;
+        outline: none;
+        border: 1px green solid;
+    }
+    section.math-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 5px 0;
+    }
+    section.question-answer {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    section.question-answer section.question-box section {
+        width: 30vw;
+        border: 1px gray solid;
+        border-radius: 5px;
+        padding: 5px 8px;
+        text-align: center;
+    }
+    section.question-answer section.answer-box input {
+        width: 25vw;
+        padding: 6px 8px;
+        border-radius: 5px;
+        margin: 5px 15px;
+        outline: none;
+        border: 1px green solid;
+    }
+    section.check-answer button {
+        width: 20vw;
+        padding: 6px 8px;
+        cursor: pointer;
+        background-color: rgba(17, 17, 17, 0.13);
+        color: black;
+        text-align: center;
+        border-radius: 5px;
+        border: 1px rgba(0, 128, 0, 0.301) solid;
+        outline: none;
+        font-weight: bold;
+    }
+    /* End of Math Game */
+    section.mean-median-mode section input {
+        width: 290px;
+        padding: 5px 8px;
+        border: 1px blue solid;
+        outline: none;
+        border-radius: 4px;
+    }
+    /* emoji converter */
+    section.emoji-wrapper,
+    section.keycode-wrapper,
+    section.binary-wrapper {
+        width: 85vw;
+        margin: 2vw 4vw;
+        text-align: center;
+    }
+    section.emoji-container,
+    section.keycode-container,
+    section.binary-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: center;
+        align-items: center;
+    }
+    section.emoji-container section div.label,
+    section.keycode-container section div.label,
+    section.binary-container section div.label {
+        background-color: blue;
+        color: white;
+        margin-bottom: 5px;
+        padding: 4px 1px;
+        width: 82.9vw;
+    }
+    section.emoji-container section textarea,
+    section.keycode-container section textarea,
+    section.binary-container section textarea {
+        padding: 4px 3px;
+        outline: none;
+        border: 2px rgba(0, 128, 0, 0.404) solid;
+        width: 80.5vw;
+        height: 100px;
+    }
+    section.demo-container video {
+        width: 65vw;
+    }
 }
